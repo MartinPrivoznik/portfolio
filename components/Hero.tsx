@@ -25,14 +25,23 @@ export const Hero = () => {
         <div className="w-2/6 flex items-center justify-center">
           <HeroText />
         </div>
-        <div className="w-2/6">
+        <motion.div
+          animate={{ x: 100 }}
+          transition={{
+            ease: "linear",
+            duration: 2,
+            x: { duration: 1 },
+          }}
+          className="w-2/6"
+        >
           <Image
             src={"/images/hero.png"}
             alt="Martin Přívozník"
-            width={2120}
-            height={1837}
+            width={1060}
+            height={918}
+            priority={true}
           />
-        </div>
+        </motion.div>
         <div className="w-1/6"></div>
       </motion.div>
     </motion.div>
