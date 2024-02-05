@@ -9,15 +9,15 @@ import { Reveal } from "./animations/Reveal";
 import { RevealSlide } from "./animations/RevealSlide";
 import { Chip } from "@nextui-org/chip";
 
-export const ExperienceCards = (props: { title: string }) => {
+export const Studies = (props: { title: string }) => {
   return (
-    <div className="flex flex-col justify-center items-center h-full px-4">
+    <div className="flex flex-col justify-center items-center h-full">
       <RevealSlide width="fit-content">
         <h2 className={subtitle({ class: "mt-2 text-center" })}>
           {props.title}
         </h2>
       </RevealSlide>
-      <div className="flex pt-4 gap-5 flex-wrap justify-center">
+      <div className="flex pt-4 gap-5">
         {siteConfig.experiences.map((e, i) => (
           <Reveal key={i}>
             <Card className="max-w-[400px] h-full">

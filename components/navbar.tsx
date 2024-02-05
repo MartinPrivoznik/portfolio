@@ -88,8 +88,12 @@ export const Navbar = () => {
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
-                color={index === 3 ? "primary" : "foreground"}
-                href="#"
+                color={
+                  index === siteConfig.navItems.length - 1
+                    ? "primary"
+                    : "foreground"
+                }
+                href={item.href}
                 size="lg"
               >
                 {item.label}

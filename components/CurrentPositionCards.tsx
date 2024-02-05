@@ -11,13 +11,13 @@ import { Chip } from "@nextui-org/chip";
 
 export const CurrentPositionCards = (props: { title: string }) => {
   return (
-    <div className="flex flex-col justify-center items-center h-full">
+    <div className="flex flex-col justify-center items-center h-full px-4">
       <RevealSlide width="fit-content">
         <h2 className={subtitle({ class: "mt-2 text-center" })}>
           {props.title}
         </h2>
       </RevealSlide>
-      <div className="flex pt-4 gap-5">
+      <div className="flex pt-4 gap-5 flex-wrap justify-center">
         {siteConfig.currentPositions.map((e, i) => (
           <Reveal key={i}>
             <Card className="max-w-[400px] h-full">

@@ -1,9 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { subtitle, title } from "./primitives";
 import Link from "next/link";
-import { Reveal } from "./animations/Reveal";
 import { RevealSlide } from "./animations/RevealSlide";
 
 export const HeroText = () => {
