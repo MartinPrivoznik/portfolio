@@ -25,7 +25,7 @@ export const Reveal = (props: { children: JSX.Element }) => {
         initial="hidden"
         transition={{ duration: 0.5, delay: 0.3 }}
         animate={mainControls}
-        className="flex flex-col"
+        className="flex flex-col h-full"
       >
         {props.children}
       </motion.div>
