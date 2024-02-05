@@ -40,12 +40,31 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/MartinPrivoznik",
+    linkedIn:
+      "https://www.linkedin.com/in/martin-p%C5%99%C3%ADvozn%C3%ADk-5b16a0192/",
+    discord: "https://discord.com/users/252171172974821386",
   },
+  currentPositions: [
+    {
+      name: "Valatron s.r.o.",
+      period: "Nov 2020",
+      role: "Full Stack Software Engineer",
+      length: "now",
+      url: "valatron.com",
+      description: "TODO",
+      logoUrl: "https://www.valatron.com/files/ikona-modra.png",
+    },
+    {
+      name: "Dreamind s.r.o.",
+      period: "Aug 2022",
+      role: "Co-Founder, CTO",
+      length: "now",
+      url: "dreamind.cz",
+      description: "TODO",
+      logoUrl: "/images/dreamind-logo.png",
+    },
+  ],
   experiences: [
     {
       name: "Valatron s.r.o.",
