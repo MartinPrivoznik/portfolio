@@ -145,4 +145,28 @@ export const siteConfig = {
       ],
     },
   ],
+  studies: [
+    {
+      name: "SPŠSE a VOŠ Liberec",
+      period: "Sep 2016 - Jun 2020",
+      status: "Graduated with Maturita exam",
+      field: "Information technology",
+      logoUrl: "https://edulk.cz/getFile/id:466617/type:large/logo_spsse.jpg",
+    },
+    {
+      name: "FIT CTU in Prague",
+      period: "Sep 2020 - Apr 2022",
+      status: "Unfinished",
+      field: "Information technology",
+      logoUrl:
+        "https://fit.cvut.cz/media-a-pr/corporate-identity/logo-fit-en-modra.svg",
+    },
+    {
+      name: "Prague University of Economics and Business",
+      period: "Sep 2023 - now",
+      status: "Currently studying",
+      field: "Applied informatics",
+      logoUrl: "/images/vse.png",
+    },
+  ],
 };
