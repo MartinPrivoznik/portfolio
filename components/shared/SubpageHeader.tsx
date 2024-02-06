@@ -75,28 +75,30 @@ export const SubpageHeader = (props: {
             animate={mainControls}
             className="h-full w-full absolute"
           >
-            {!props.pngImg && (
-              <Image
-                src={props.imgSrc}
-                alt="Heading"
-                className="block absolute h-full -right-[200px] bottom-0 md:right-0 hero-image"
-                width={props.imgWidth}
-                height={props.imgHeight}
-                priority={true}
-                onLoad={animateImage}
-              />
-            )}
-            {props.pngImg && (
-              <Image
-                src={props.imgSrc}
-                alt="Heading"
-                className="block absolute h-full -right-[80px] sm:right-0 bottom-0 lg:right-[200px] xl:right-[270px] 2xl:right-[450px] hero-image"
-                width={props.imgWidth}
-                height={props.imgHeight}
-                priority={true}
-                onLoad={animateImage}
-              />
-            )}
+            <div className="relative h-full w-full">
+              {!props.pngImg && (
+                <Image
+                  src={props.imgSrc}
+                  alt="Heading"
+                  className="block absolute h-full -right-[200px] bottom-0 md:right-0 subpage-hero-image"
+                  width={props.imgWidth}
+                  height={props.imgHeight}
+                  priority={true}
+                  onLoad={animateImage}
+                />
+              )}
+              {props.pngImg && (
+                <Image
+                  src={props.imgSrc}
+                  alt="Heading"
+                  className="block absolute h-full -right-[80px] sm:right-0 bottom-0 lg:right-[200px] xl:right-[270px] 2xl:right-[450px] subpage-hero-image"
+                  width={props.imgWidth}
+                  height={props.imgHeight}
+                  priority={true}
+                  onLoad={animateImage}
+                />
+              )}
+            </div>
           </motion.div>
           {!props.pngImg && (
             <div className="absolute -right-[200px] bottom-0 md:right-0 block img-grow"></div>

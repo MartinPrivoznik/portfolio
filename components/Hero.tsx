@@ -31,7 +31,7 @@ export const Hero = () => {
           initial="hidden"
           transition={{ duration: 0.5 }}
           animate={mainControls}
-          className="flex relative -right-[70px] xs:right-0 w-3/6 lg:w-2/6 justify-end"
+          className="flex absolute bottom-0 w-full h-full lg:relative -right-[55px] xs:right-0 md:w-3/7 lg:w-2/6 justify-end"
         >
           <Image
             src={"/images/hero-min.png"}
@@ -40,7 +40,7 @@ export const Hero = () => {
             height={918}
             priority={true}
             onLoad={animateImage}
-            className=" absolute bottom-0 sm:relative hero-image"
+            className="absolute bottom-0 lg:relative hero-image"
           />
         </motion.div>
         <div className="hidden lg:block w-1/6"></div>
