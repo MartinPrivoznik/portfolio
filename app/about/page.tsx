@@ -8,7 +8,7 @@ export default function AboutPage() {
         subheading="Some kind words about my livelihood"
         imgSrc="/images/about-hero-min.png"
         imgWidth={450}
-        imgHeight={300}
+        imgHeight={400}
         pngImg
       />
     </>
