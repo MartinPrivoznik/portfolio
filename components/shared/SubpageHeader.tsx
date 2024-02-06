@@ -18,9 +18,9 @@ export const SubpageHeader = (props: {
   const imgRef = useRef(null);
   const mainControls = useAnimation();
 
-  useEffect(() => {
+  const animateImage = () => {
     mainControls.start("visible");
-  }, []);
+  };
 
   return (
     <>
@@ -83,6 +83,7 @@ export const SubpageHeader = (props: {
                 width={props.imgWidth}
                 height={props.imgHeight}
                 priority={true}
+                onLoadingComplete={animateImage}
               />
             )}
             {props.pngImg && (
@@ -93,6 +94,7 @@ export const SubpageHeader = (props: {
                 width={props.imgWidth}
                 height={props.imgHeight}
                 priority={true}
+                onLoadingComplete={animateImage}
               />
             )}
           </motion.div>
