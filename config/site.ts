@@ -173,6 +173,13 @@ export const siteConfig = {
     {
       name: "Eshop Cymedica",
       shortDescription: "Eshop Web application solution",
+      links: [
+        {
+          text: "demo.cymedica.cz",
+          url: "https://demo.cymedica.cz",
+          private: true,
+        },
+      ],
       text: "Textik - TODO",
       technologies: [
         "ASP.NET Core",
@@ -180,7 +187,7 @@ export const siteConfig = {
         "MSSQL",
         "REDIS",
         "WCF",
-        "REST API",
+        "DevOps CI/CD",
       ],
     },
     {
@@ -190,10 +197,12 @@ export const siteConfig = {
         {
           text: "petshop.cymedica.cz/weilovna",
           url: "https://petshop.cymedica.cz/weilovna",
+          private: false,
         },
         {
           text: "shop.vetnem.cz",
           url: "https://shop.vetnem.cz",
+          private: false,
         },
       ],
       text: "Textik - TODO",
@@ -206,6 +215,7 @@ export const siteConfig = {
         {
           text: "markeeto.cz",
           url: "https://markeeto.cz",
+          private: false,
         },
       ],
       text: "Textik - TODO",
@@ -232,10 +242,12 @@ export const siteConfig = {
         {
           text: "www.pozemky-mirotice.cz/",
           url: "https://www.pozemky-mirotice.cz",
+          private: false,
         },
         {
           text: "www.pozemky-vinarice.cz/",
           url: "https://www.pozemky-vinarice.cz",
+          private: false,
         },
       ],
       text: "Textik - TODO",
@@ -255,6 +267,7 @@ export const siteConfig = {
         {
           text: "www.whitesoft.cz/reseni/male-a-stredni-firmy/citr",
           url: "https://www.whitesoft.cz/reseni/male-a-stredni-firmy/citr",
+          private: false,
         },
       ],
       text: "Textik - TODO",
@@ -268,6 +281,7 @@ export const siteConfig = {
         {
           text: "freshflow.cz",
           url: "https://freshflow.cz",
+          private: false,
         },
       ],
       text: "Textik - TODO",
@@ -280,6 +294,7 @@ export const siteConfig = {
         {
           text: "aiat.cz",
           url: "https://aiat.cz/",
+          private: false,
         },
       ],
       text: "Textik - TODO",
@@ -292,6 +307,7 @@ export const siteConfig = {
         {
           text: "GitHub",
           url: "https://github.com/MartinPrivoznik/TuxMan-FPGA",
+          private: false,
         },
       ],
       text: "Textik - TODO",

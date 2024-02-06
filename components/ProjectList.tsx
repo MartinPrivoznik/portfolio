@@ -22,9 +22,12 @@ export const ProjectList = () => {
               {p.links ? (
                 <div className="flex flex-col">
                   {p.links.map((l, i) => (
-                    <Link key={i} href={l.url} isExternal>
-                      {l.text}
-                    </Link>
+                    <div className="flex gap-x-2 flex-wrap" key={i}>
+                      <Link href={l.url} isExternal>
+                        {l.text}
+                      </Link>
+                      {l.private && <span>(Authorized access only)</span>}
+                    </div>
                   ))}
                 </div>
               ) : (
