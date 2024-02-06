@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -7,30 +9,25 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
-
 import { link as linkStyles } from "@nextui-org/theme";
-
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
 import clsx from "clsx";
-
-import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  LinkedInIcon,
-} from "@/components/icons";
-
+import { GithubIcon, DiscordIcon, LinkedInIcon } from "@/components/icons";
 import { Logo } from "@/components/icons";
+import { useReducer } from "react";
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useReducer((current) => !current, false);
+
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      maxWidth="xl"
+      position="sticky"
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -70,7 +67,7 @@ export const Navbar = () => {
           <Link isExternal href={siteConfig.links.github} aria-label="Github">
             <GithubIcon className="text-default-500" />
           </Link>
-          <ThemeSwitch />
+          {/* <ThemeSwitch /> */}
         </NavbarItem>
         <NavbarItem className="hidden md:flex"></NavbarItem>
       </NavbarContent>
@@ -79,7 +76,7 @@ export const Navbar = () => {
         <Link isExternal href={siteConfig.links.github} aria-label="Github">
           <GithubIcon className="text-default-500" />
         </Link>
-        <ThemeSwitch />
+        {/* <ThemeSwitch /> */}
         <NavbarMenuToggle />
       </NavbarContent>
 
@@ -95,6 +92,7 @@ export const Navbar = () => {
                 }
                 href={item.href}
                 size="lg"
+                onPress={() => setIsMenuOpen()}
               >
                 {item.label}
               </Link>

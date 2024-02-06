@@ -10,7 +10,7 @@ import { subtitle } from "@/components/primitives";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 w-full overflow-x-hidden">
+    <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 w-full overflow-x-hidden pt-16">
       <Hero />
       <div className="container flex flex-col items-center justify-center gap-4">
         <CurrentPositionCards title="Current positions" />

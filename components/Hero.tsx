@@ -2,25 +2,13 @@
 
 import Image from "next/image";
 import { HeroText } from "./HeroText";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import { HideOnScroll } from "./animations/HideOnScroll";
 
 export const Hero = () => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start start", "end start"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 0.8]);
-
   return (
-    <motion.div style={{ opacity }} ref={targetRef}>
-      <motion.div
-        style={{ scale }}
-        className="flex relative w-full px-5 sm:px-24 border-b border-zinc-700"
-      >
+    <HideOnScroll>
+      <div className="flex relative w-full px-5 sm:px-24 border-b border-zinc-700">
         <div className="hidden lg:block w-1/6"></div>
         <div className="w-2/3 lg:w-2/6 flex items-center justify-center">
           <HeroText />
@@ -44,7 +32,7 @@ export const Hero = () => {
           />
         </motion.div>
         <div className="hidden lg:block w-1/6"></div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </HideOnScroll>
   );
 };
