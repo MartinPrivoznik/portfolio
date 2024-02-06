@@ -1,4 +1,3 @@
-import { title } from "@/components/primitives";
 import { SubpageHeader } from "@/components/shared/SubpageHeader";
 
 export default function ProjectsPage() {

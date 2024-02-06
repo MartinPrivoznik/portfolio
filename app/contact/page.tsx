@@ -1,6 +1,6 @@
 import { SubpageHeader } from "@/components/shared/SubpageHeader";
 
-export default function AboutPage() {
+export default function ContactPage() {
   return (
     <>
       <SubpageHeader
