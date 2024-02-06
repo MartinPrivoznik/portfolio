@@ -83,7 +83,7 @@ export const SubpageHeader = (props: {
                 width={props.imgWidth}
                 height={props.imgHeight}
                 priority={true}
-                onLoadingComplete={animateImage}
+                onLoad={animateImage}
               />
             )}
             {props.pngImg && (
@@ -94,7 +94,7 @@ export const SubpageHeader = (props: {
                 width={props.imgWidth}
                 height={props.imgHeight}
                 priority={true}
-                onLoadingComplete={animateImage}
+                onLoad={animateImage}
               />
             )}
           </motion.div>

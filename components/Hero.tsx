@@ -39,7 +39,7 @@ export const Hero = () => {
             width={1060}
             height={918}
             priority={true}
-            onLoadingComplete={animateImage}
+            onLoad={animateImage}
             className=" absolute bottom-0 sm:relative hero-image"
           />
         </motion.div>
