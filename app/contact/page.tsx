@@ -6,7 +6,7 @@ export default function ContactPage() {
       <SubpageHeader
         heading="Contact"
         subheading="Place where you find my contact information"
-        imgSrc="/images/contact-hero-min.jpg"
+        imgSrc="/images/contact-page-hero-min.jpg"
         imgWidth={450}
         imgHeight={300}
       />
