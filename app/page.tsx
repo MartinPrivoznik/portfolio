@@ -7,7 +7,6 @@ import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { RevealSlide } from "@/components/animations/RevealSlide";
 import { subtitle } from "@/components/primitives";
-import { Reveal } from "@/components/animations/Reveal";
 
 export default function Home() {
   return (
@@ -36,28 +35,6 @@ export default function Home() {
           About me
         </Link>
       </div>
-
-      {/* <div className="flex gap-3">
-        <Link
-          isExternal
-          href={siteConfig.links.docs}
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div> */}
     </section>
   );
 }
