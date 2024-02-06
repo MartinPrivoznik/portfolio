@@ -16,10 +16,14 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import { GithubIcon, DiscordIcon, LinkedInIcon } from "@/components/icons";
 import { Logo } from "@/components/icons";
-import { useReducer } from "react";
+import { useEffect, useReducer, useState } from "react";
 
 export const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useReducer((current) => !current, false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, []);
 
   return (
     <NextUINavbar
@@ -92,7 +96,7 @@ export const Navbar = () => {
                 }
                 href={item.href}
                 size="lg"
-                onPress={() => setIsMenuOpen()}
+                onPress={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>

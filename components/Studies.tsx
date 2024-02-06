@@ -1,13 +1,11 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
-import { Divider } from "@nextui-org/divider";
+import { Card, CardHeader, CardBody } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
 import { subtitle } from "./primitives";
 import { Reveal } from "./animations/Reveal";
 import { RevealSlide } from "./animations/RevealSlide";
-import { Chip } from "@nextui-org/chip";
 
 export const Studies = (props: { title: string }) => {
   return (
