@@ -38,7 +38,7 @@ export const SubpageHeader = (props: {
         }
       `}</style>
       <HideOnScroll>
-        <div className="w-full relative h-[280px] border-b border-zinc-700 overflow-hidden flex justify-start sm:justify-center items-center">
+        <div className="w-full relative min-h-[280px] border-b border-zinc-700 overflow-hidden flex justify-start sm:justify-center items-center">
           <div
             className={
               "sm:w-4/5 flex flex-col z-10" +
@@ -79,7 +79,7 @@ export const SubpageHeader = (props: {
               <Image
                 src={props.imgSrc}
                 alt="Heading"
-                className="block absolute -right-[200px] bottom-0 md:right-0 hero-image"
+                className="block absolute h-full -right-[200px] bottom-0 md:right-0 hero-image"
                 width={props.imgWidth}
                 height={props.imgHeight}
                 priority={true}
@@ -90,7 +90,7 @@ export const SubpageHeader = (props: {
               <Image
                 src={props.imgSrc}
                 alt="Heading"
-                className="block absolute -right-[100px] sm:right-0 bottom-0 lg:right-[200px] xl:right-[270px] 2xl:right-[450px] hero-image"
+                className="block absolute h-full -right-[80px] sm:right-0 bottom-0 lg:right-[200px] xl:right-[270px] 2xl:right-[450px] hero-image"
                 width={props.imgWidth}
                 height={props.imgHeight}
                 priority={true}

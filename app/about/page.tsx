@@ -7,7 +7,7 @@ export default function AboutPage() {
         heading="About me"
         subheading="Some kind words about my livelihood"
         imgSrc="/images/about-hero-min.png"
-        imgWidth={450}
+        imgWidth={420}
         imgHeight={400}
         pngImg
       />

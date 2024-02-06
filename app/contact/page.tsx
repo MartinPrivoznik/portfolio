@@ -7,7 +7,7 @@ export default function ContactPage() {
         heading="Contact"
         subheading="Place where you find my contact information"
         imgSrc="/images/contact-page-hero-min.jpg"
-        imgWidth={450}
+        imgWidth={430}
         imgHeight={300}
       />
     </>
