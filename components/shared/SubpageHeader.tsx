@@ -34,6 +34,7 @@ export const SubpageHeader = (props: {
             rgba(0, 0, 0, 0) 0%,
             rgba(0, 0, 0, 1) 90%
           );
+          transition: right 1s;
         }
       `}</style>
       <HideOnScroll>
@@ -47,12 +48,16 @@ export const SubpageHeader = (props: {
             }
           >
             <RevealSlide width="fit-content">
-              <h2 className="tracking-tight inline font-semibold text-3xl lg:text 5xl">
+              <h2 className="tracking-tight inline font-semibold text-3xl lg:text text-center">
                 {props.heading}
               </h2>
             </RevealSlide>
-            <RevealSlide>
-              <h3 className={subtitle({ class: "mt-2" })}>
+            <RevealSlide width="fit-content">
+              <h3
+                className={subtitle({
+                  class: "mt-2" + (props.pngImg ? "" : " text-center"),
+                })}
+              >
                 {props.subheading}
               </h3>
             </RevealSlide>
