@@ -13,7 +13,7 @@ html, body {
 @media only screen and (max-width: 1023px) {
     .hero-image {
         max-height: 100%;
-        max-width: fit-content;
+        width: auto;
     }
 }
 
