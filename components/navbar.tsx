@@ -17,13 +17,15 @@ import clsx from "clsx";
 import { GithubIcon, DiscordIcon, LinkedInIcon } from "@/components/icons";
 import { Logo } from "@/components/icons";
 import { useEffect, useReducer, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const path = usePathname();
 
   useEffect(() => {
     setIsMenuOpen(false);
-  }, []);
+  }, [path]);
 
   return (
     <NextUINavbar
@@ -96,7 +98,6 @@ export const Navbar = () => {
                 }
                 href={item.href}
                 size="lg"
-                onPress={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
