@@ -37,13 +37,13 @@ export const SubpageHeader = (props: {
         }
       `}</style>
       <HideOnScroll>
-        <div className="w-full relative h-[280px] border-b border-zinc-700 overflow-hidden flex justify-center items-center">
+        <div className="w-full relative h-[280px] border-b border-zinc-700 overflow-hidden flex justify-start sm:justify-center items-center">
           <div
             className={
-              "w-full sm:w-4/5 flex flex-col z-10" +
+              "sm:w-4/5 flex flex-col z-10" +
               (props.pngImg
-                ? " pl-6 sm:pl-0 items-start sm:items-center"
-                : " items-center")
+                ? " w-2/3 pl-6 sm:pl-0 items-start sm:items-center"
+                : " w-full items-center")
             }
           >
             <RevealSlide width="fit-content">

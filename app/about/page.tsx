@@ -5,7 +5,7 @@ export default function AboutPage() {
     <>
       <SubpageHeader
         heading="About me"
-        subheading="Showcase of some of my work"
+        subheading="Some kind words about my livelihood"
         imgSrc="/images/about-hero-min.png"
         imgWidth={450}
         imgHeight={300}
