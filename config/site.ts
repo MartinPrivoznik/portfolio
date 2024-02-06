@@ -169,4 +169,113 @@ export const siteConfig = {
       logoUrl: "/images/vse.png",
     },
   ],
+  projects: [
+    {
+      name: "Eshop Cymedica",
+      shortDescription: "Eshop Web application solution",
+      text: "Textik - TODO",
+      technologies: [
+        "ASP.NET Core",
+        "MVC",
+        "MSSQL",
+        "REDIS",
+        "WCF",
+        "REST API",
+      ],
+    },
+    {
+      name: "PetShop Cymedica",
+      shortDescription: "Boxed Eshop Web application solution",
+      links: [
+        {
+          text: "petshop.cymedica.cz/weilovna",
+          url: "https://petshop.cymedica.cz/weilovna",
+        },
+        {
+          text: "shop.vetnem.cz",
+          url: "https://shop.vetnem.cz",
+        },
+      ],
+      text: "Textik - TODO",
+      technologies: ["ASP.NET Core", "MVC", "MSSQL", "Hangfire", "REST API"],
+    },
+    {
+      name: "Markeeto company database",
+      shortDescription: "Company database filter Web application",
+      links: [
+        {
+          text: "markeeto.cz",
+          url: "https://markeeto.cz",
+        },
+      ],
+      text: "Textik - TODO",
+      technologies: ["ASP.NET Core", "REST API", "MSSQL", "Angular"],
+    },
+    {
+      name: "Backend solutions for real estate agents (with demo frontend applications)",
+      shortDescription: "REST API solution for several real estate agencies",
+      text: "Textik - TODO",
+      technologies: ["ASP.NET Core", "REST API", "MSSQL", "React", "OCR"],
+    },
+    {
+      name: "Confin",
+      shortDescription:
+        "Microsites for development projects with fully custom CMS for each microsite",
+      links: [
+        {
+          text: "www.pozemky-mirotice.cz/",
+          url: "https://www.pozemky-mirotice.cz",
+        },
+        {
+          text: "www.pozemky-vinarice.cz/",
+          url: "https://www.pozemky-vinarice.cz",
+        },
+      ],
+      text: "Textik - TODO",
+      technologies: ["Next.JS", "REST API"],
+    },
+    {
+      name: "DEGA Config",
+      shortDescription: "Desktop interface for configuring gas detectors",
+      text: "Textik - TODO",
+      technologies: [".NET Framework", "WPF", "SQLite", "RS232 interface"],
+    },
+    {
+      name: "FreshFlow Mobile",
+      shortDescription:
+        "Multiplatform calendar mobile application for managing teams",
+      links: [
+        {
+          text: "freshflow.cz",
+          url: "https://freshflow.cz",
+        },
+      ],
+      text: "Textik - TODO",
+      technologies: ["Xamarin", "SQLite", "REST API"],
+    },
+    {
+      name: "AIAT Presentation Website",
+      shortDescription: "Simple presentation website built with WordPress",
+      links: [
+        {
+          text: "aiat.cz",
+          url: "https://aiat.cz/",
+        },
+      ],
+      text: "Textik - TODO",
+      technologies: ["WordPress", "Envato elements", "Elementor"],
+    },
+    {
+      name: "TuxMan FPGA",
+      shortDescription: "FPGA solution for an arcade game",
+      links: [
+        {
+          text: "GitHub",
+          url: "https://github.com/MartinPrivoznik/TuxMan-FPGA",
+        },
+      ],
+      text: "Textik - TODO",
+      technologies: ["VHDL", "Basys3", "VGA", "PS2"],
+    },
+  ],
 };

@@ -3,7 +3,10 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-export const Reveal = (props: { children: JSX.Element }) => {
+export const Reveal = (props: {
+  children: JSX.Element;
+  fullWidth?: boolean;
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
@@ -16,7 +19,10 @@ export const Reveal = (props: { children: JSX.Element }) => {
   }, [isInView]);
 
   return (
-    <div style={{ position: "relative", overflow: "hidden" }}>
+    <div
+      style={{ position: "relative", overflow: "hidden" }}
+      className={props.fullWidth ? "w-full" : ""}
+    >
       <motion.div
         ref={ref}
         variants={{
@@ -25,7 +31,7 @@ export const Reveal = (props: { children: JSX.Element }) => {
           x: { type: "spring" },
         }}
         initial="hidden"
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         animate={mainControls}
         className="flex flex-col h-full"
       >
