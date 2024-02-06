@@ -215,7 +215,14 @@ export const siteConfig = {
       name: "Backend solutions for real estate agents (with demo frontend applications)",
       shortDescription: "REST API solution for several real estate agencies",
       text: "Textik - TODO",
-      technologies: ["ASP.NET Core", "REST API", "MSSQL", "React", "OCR"],
+      technologies: [
+        "ASP.NET Core",
+        "REST API",
+        "MSSQL",
+        "Hangfire",
+        "React",
+        "OCR",
+      ],
     },
     {
       name: "Confin",
@@ -239,6 +246,19 @@ export const siteConfig = {
       shortDescription: "Desktop interface for configuring gas detectors",
       text: "Textik - TODO",
       technologies: [".NET Framework", "WPF", "SQLite", "RS232 interface"],
+    },
+    {
+      name: "CITR",
+      shortDescription:
+        "Desktop application for processing corporate income tax returns",
+      links: [
+        {
+          text: "www.whitesoft.cz/reseni/male-a-stredni-firmy/citr",
+          url: "https://www.whitesoft.cz/reseni/male-a-stredni-firmy/citr",
+        },
+      ],
+      text: "Textik - TODO",
+      technologies: [".NET Framework", "WinForms", "MSSQL"],
     },
     {
       name: "FreshFlow Mobile",
