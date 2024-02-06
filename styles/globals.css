@@ -6,6 +6,10 @@ html, body {
     min-height: 100vh;
 }
 
+.hero-image {
+    transition: right 1s;
+}
+
 @media only screen and (max-width: 639px) {
     .hero-image {
         max-height: 100%;

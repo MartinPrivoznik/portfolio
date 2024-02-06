@@ -23,7 +23,7 @@ export const Hero = () => {
           className="flex relative w-2/5 lg:w-2/6 justify-end"
         >
           <Image
-            src={"/images/hero.png"}
+            src={"/images/hero-min.png"}
             alt="Martin Přívozník"
             width={1060}
             height={918}

@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 import { HideOnScroll } from "../animations/HideOnScroll";
 import { subtitle } from "../primitives";
 import { RevealSlide } from "../animations/RevealSlide";
-import { Reveal } from "../animations/Reveal";
 
 export const SubpageHeader = (props: {
   heading: string;
@@ -14,6 +13,7 @@ export const SubpageHeader = (props: {
   imgWidth: number;
   imgHeight: number;
   subheading: string;
+  pngImg?: boolean;
 }) => {
   const imgRef = useRef(null);
   const mainControls = useAnimation();
@@ -32,13 +32,20 @@ export const SubpageHeader = (props: {
           background: linear-gradient(
             to left,
             rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 1) 100%
+            rgba(0, 0, 0, 1) 90%
           );
         }
       `}</style>
       <HideOnScroll>
         <div className="w-full relative h-[280px] border-b border-zinc-700 overflow-hidden flex justify-center items-center">
-          <div className="w-full sm:w-4/5 flex flex-col items-center z-10">
+          <div
+            className={
+              "w-full sm:w-4/5 flex flex-col z-10" +
+              (props.pngImg
+                ? " pl-6 sm:pl-0 items-start sm:items-center"
+                : " items-center")
+            }
+          >
             <RevealSlide width="fit-content">
               <h2 className="tracking-tight inline font-semibold text-3xl lg:text 5xl">
                 {props.heading}
@@ -63,16 +70,30 @@ export const SubpageHeader = (props: {
             animate={mainControls}
             className="h-full w-full absolute"
           >
-            <Image
-              src={props.imgSrc}
-              alt="Heading"
-              className="block absolute -right-[200px] bottom-0 md:right-0 hero-image"
-              width={props.imgWidth}
-              height={props.imgHeight}
-              priority={true}
-            />
+            {!props.pngImg && (
+              <Image
+                src={props.imgSrc}
+                alt="Heading"
+                className="block absolute -right-[200px] bottom-0 md:right-0 hero-image"
+                width={props.imgWidth}
+                height={props.imgHeight}
+                priority={true}
+              />
+            )}
+            {props.pngImg && (
+              <Image
+                src={props.imgSrc}
+                alt="Heading"
+                className="block absolute -right-[100px] sm:right-0 bottom-0 lg:right-[200px] xl:right-[270px] 2xl:right-[450px] hero-image"
+                width={props.imgWidth}
+                height={props.imgHeight}
+                priority={true}
+              />
+            )}
           </motion.div>
-          <div className="absolute -right-[200px] bottom-0 md:right-0 block img-grow"></div>
+          {!props.pngImg && (
+            <div className="absolute -right-[200px] bottom-0 md:right-0 block img-grow"></div>
+          )}
         </div>
       </HideOnScroll>
     </>

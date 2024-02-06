@@ -7,7 +7,7 @@ export default function ProjectsPage() {
       <SubpageHeader
         heading="Projects"
         subheading="Showcase of some of my work"
-        imgSrc="/images/programmingHead.jpg"
+        imgSrc="/images/programmingHead-min.jpg"
         imgWidth={500}
         imgHeight={300}
       />

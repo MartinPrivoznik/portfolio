@@ -1,9 +1,16 @@
-import { title } from "@/components/primitives";
+import { SubpageHeader } from "@/components/shared/SubpageHeader";
 
 export default function AboutPage() {
-	return (
-		<div>
-			<h1 className={title()}>About</h1>
-		</div>
-	);
+  return (
+    <>
+      <SubpageHeader
+        heading="About me"
+        subheading="Showcase of some of my work"
+        imgSrc="/images/about-hero-min.png"
+        imgWidth={450}
+        imgHeight={300}
+        pngImg
+      />
+    </>
+  );
 }
