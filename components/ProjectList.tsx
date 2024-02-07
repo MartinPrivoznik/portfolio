@@ -23,7 +23,7 @@ export const ProjectList = () => {
                 <div className="flex flex-col">
                   {p.links.map((l, i) => (
                     <div className="flex gap-x-2 flex-wrap" key={i}>
-                      <Link href={l.url} isExternal>
+                      <Link href={l.url} isExternal={!l.url.startsWith("/")}>
                         {l.text}
                       </Link>
                       {l.private && <span>(Authorized access only)</span>}

@@ -171,6 +171,19 @@ export const siteConfig = {
   ],
   projects: [
     {
+      name: "This portfolio",
+      shortDescription: "Custom personal website",
+      links: [
+        {
+          text: "Home",
+          url: "/",
+          private: false,
+        },
+      ],
+      text: "Textik - TODO",
+      technologies: ["Next.JS", "TypeScript", "Tailwind", "Framer Motion"],
+    },
+    {
       name: "Eshop Cymedica",
       shortDescription: "Eshop Web application solution",
       links: [
@@ -178,6 +191,7 @@ export const siteConfig = {
           text: "demo.cymedica.cz",
           url: "https://demo.cymedica.cz",
           private: true,
+          internal: null,
         },
       ],
       text: "Textik - TODO",
