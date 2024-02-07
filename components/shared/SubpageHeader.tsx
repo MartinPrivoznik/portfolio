@@ -6,9 +6,12 @@ import { useEffect, useRef } from "react";
 import { HideOnScroll } from "../animations/HideOnScroll";
 import { subtitle } from "../primitives";
 import { RevealSlide } from "../animations/RevealSlide";
+import Link from "next/link";
 
 export const SubpageHeader = (props: {
   heading: string;
+  postHeadingText?: string;
+  postHeadingClickAction?: () => void;
   imgSrc: string;
   imgWidth: number;
   imgHeight: number;
@@ -50,6 +53,18 @@ export const SubpageHeader = (props: {
             <RevealSlide width="fit-content">
               <h2 className="tracking-tight inline font-semibold text-3xl lg:text text-center">
                 {props.heading}
+                {props.postHeadingText && (
+                  <>
+                    {" "}
+                    <Link
+                      href="#"
+                      onClick={props.postHeadingClickAction}
+                      className="text-primary hover:underline"
+                    >
+                      {props.postHeadingText}
+                    </Link>
+                  </>
+                )}
               </h2>
             </RevealSlide>
             <RevealSlide width="fit-content">
