@@ -31,7 +31,7 @@ export const CursorGradient = () => {
           );
         }
       `}</style>
-      <div className="fixed pointer-events-none opacity-5 inset-0 z-30 lg:absolute transition duration-300 backdrop-div"></div>
+      <div className="fixed pointer-events-none opacity-5 inset-0 z-50 lg:absolute transition duration-300 backdrop-div"></div>
     </>
   );
 };
