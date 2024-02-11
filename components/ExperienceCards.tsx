@@ -33,7 +33,7 @@ export const ExperienceCards = (props: { title: string }) => {
                   <p className="text-md">
                     {e.role} at {e.name}
                   </p>
-                  <p className="text-small text-default-500">{e.url}</p>
+                  <p className="text-small text-default-500">{e.urlText}</p>
                 </div>
               </CardHeader>
               <Divider />

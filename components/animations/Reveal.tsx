@@ -8,7 +8,7 @@ export const Reveal = (props: {
   fullWidth?: boolean;
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref);
 
   const mainControls = useAnimation();
 
@@ -16,15 +16,15 @@ export const Reveal = (props: {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   return (
     <div
+      ref={ref}
       style={{ position: "relative", overflow: "hidden" }}
       className={props.fullWidth ? "w-full" : ""}
     >
       <motion.div
-        ref={ref}
         variants={{
           hidden: { opacity: 0, y: 75 },
           visible: { opacity: 1, y: 0 },

@@ -59,7 +59,7 @@ export const SubpageHeader = (props: {
                     <Link
                       href="#"
                       onClick={props.postHeadingClickAction}
-                      className="text-primary hover:underline"
+                      className="hidden md:inline-block text-primary hover:underline"
                     >
                       {props.postHeadingText}
                     </Link>

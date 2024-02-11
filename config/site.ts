@@ -59,7 +59,8 @@ export const siteConfig = {
       period: "Nov 2020",
       role: "Full Stack Software Engineer",
       length: "now",
-      url: "valatron.com",
+      urlText: "valatron.com",
+      url: "https://www.valatron.com/",
       description:
         "In this job, I mostly focus on custom web application development. I have delivered several solutions to clients based on multiple different frameworks. I currently work here as a software engineer and Tech Lead.",
       logoUrl: "https://www.valatron.com/files/ikona-modra.png",
@@ -78,7 +79,8 @@ export const siteConfig = {
       period: "Aug 2022",
       role: "Co-Founder, CTO",
       length: "now",
-      url: "dreamind.cz",
+      urlText: "dreamind.cz",
+      url: "https://dreamind.cz/",
       description:
         "In addition to my main job, I have founded a smaller start-up with my friends also focused on custom web application development. We are currently delivering solutions for several clients and more are on the way.",
       logoUrl: "/images/dreamind-logo.png",
@@ -99,7 +101,8 @@ export const siteConfig = {
       period: "Jun 2019 - Sep 2019",
       role: ".NET developer",
       length: "4 months",
-      url: "valatron.com",
+      urlText: "valatron.com",
+      url: "https://www.valatron.com/",
       description:
         "Was really my first experience. I was delivering a phone application for a client based on .NET Xamarin, learning the basics of C# and XAML.",
       logoUrl: "https://www.valatron.com/files/ikona-modra.png",
@@ -115,7 +118,8 @@ export const siteConfig = {
       period: "Oct 2019 - Jul 2020",
       role: ".NET developer",
       length: "10 months",
-      url: "whitesoft.cz",
+      urlText: "whitesoft.cz",
+      url: "https://www.whitesoft.cz/",
       description:
         "I was programming an accounting management application which helped the accountants have all their files at one place. App was based on WinForms (not gonna do that again).",
       logoUrl:
@@ -131,7 +135,8 @@ export const siteConfig = {
       period: "Mar 2022 - Mar 2023",
       role: "Lecturer",
       length: "1 yr 1 mo",
-      url: "prahacoding.cz",
+      urlText: "prahacoding.cz",
+      url: "https://prahacoding.cz/",
       description:
         "I managed to talk to students and pass them my knowledge of web development and the best practices. The language I taught them was PHP",
       logoUrl:
@@ -152,14 +157,18 @@ export const siteConfig = {
       status: "Graduated with Maturita exam",
       field: "Information technology",
       logoUrl: "https://edulk.cz/getFile/id:466617/type:large/logo_spsse.jpg",
+      url: "https://www.prumyslovkaliberec.cz/",
+      urlText: "www.prumyslovkaliberec.cz",
     },
     {
       name: "FIT CTU in Prague",
       period: "Sep 2020 - Apr 2022",
       status: "Unfinished",
-      field: "Information technology",
+      field: "Computer engineering",
       logoUrl:
         "https://fit.cvut.cz/media-a-pr/corporate-identity/logo-fit-en-modra.svg",
+      url: "https://fit.cvut.cz/",
+      urlText: "fit.cvut.cz",
     },
     {
       name: "Prague University of Economics and Business",
@@ -167,6 +176,8 @@ export const siteConfig = {
       status: "Currently studying",
       field: "Applied informatics",
       logoUrl: "/images/vse.png",
+      url: "https://fis.vse.cz/",
+      urlText: "fis.vse.cz",
     },
   ],
   projects: [
@@ -299,7 +310,7 @@ export const siteConfig = {
         },
       ],
       text: "Textik - TODO",
-      technologies: ["Xamarin", "SQLite", "REST API"],
+      technologies: ["Xamarin", "SQLite", "REST API", "Firebase"],
     },
     {
       name: "AIAT Presentation Website",
@@ -328,4 +339,46 @@ export const siteConfig = {
       technologies: ["VHDL", "Basys3", "VGA", "PS2"],
     },
   ],
+  cv: {
+    skills: [
+      {
+        name: ".NET",
+        value: 95,
+      },
+      {
+        name: "SQL",
+        value: 90,
+      },
+      {
+        name: "React, Next.js",
+        value: 85,
+      },
+      {
+        name: "Angular",
+        value: 60,
+      },
+      {
+        name: "NoSQL",
+        value: 70,
+      },
+      {
+        name: "PHP",
+        value: 55,
+      },
+      {
+        name: "C/C++",
+        value: 60,
+      },
+    ],
+    communicationSkills: [
+      {
+        name: "Czech",
+        value: 100,
+      },
+      {
+        name: "English (C1)",
+        value: 83,
+      },
+    ],
+  },
 };

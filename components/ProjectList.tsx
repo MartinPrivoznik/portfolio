@@ -4,7 +4,6 @@ import { siteConfig } from "@/config/site";
 import { Divider } from "@nextui-org/divider";
 import { subtitle } from "./primitives";
 import { Chip } from "@nextui-org/chip";
-import { RevealSlide } from "./animations/RevealSlide";
 import { Reveal } from "./animations/Reveal";
 import { Link } from "@nextui-org/link";
 
