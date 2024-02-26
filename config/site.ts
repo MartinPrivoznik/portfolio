@@ -192,7 +192,7 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "Textik - TODO",
+      text: "A simple portfolio page containing information about me, my projects, with the possibility to contact me",
       technologies: ["Next.JS", "TypeScript", "Tailwind", "Framer Motion"],
     },
     {
@@ -206,7 +206,7 @@ export const siteConfig = {
           internal: null,
         },
       ],
-      text: "Textik - TODO",
+      text: "An e-shop tailored for a Cymedica client. This is a fully custom solution. Only authorized users can log in to the e-shop, which is managed by the client using its CRM system. The application provides veterinarians with the opportunity to purchase veterinary supplies based on individually negotiated conditions with the client",
       technologies: [
         "ASP.NET Core",
         "MVC",
@@ -231,7 +231,7 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "Textik - TODO",
+      text: "A network of e-shops providing veterinary supplies for end clients. It is a boxed solution, and it is possible for an authorized user to generate an identical-looking e-shop for a new client directly from the e-shop administration. The solution provides the possibility of editing some elements on individual websites, such as the company logo or name",
       technologies: ["ASP.NET Core", "MVC", "MSSQL", "Hangfire", "REST API"],
     },
     {
@@ -244,13 +244,13 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "Textik - TODO",
+      text: "Company database with very detailed filtering options. This is an application that allows access to additional functionality based on the amount of the subscription. A third-party database is used to list information about companies, and the application as such handles user management and their unlocked records",
       technologies: ["ASP.NET Core", "REST API", "MSSQL", "Angular"],
     },
     {
       name: "Backend solutions for real estate agents (with demo frontend applications)",
       shortDescription: "REST API solution for several real estate agencies",
-      text: "Textik - TODO",
+      text: "I was involved in the development of REST APIs that was used by real estate agents' front-end applications to facilitate their work. The application helped them generate rent and other contracts in .docx or .pdf format. In addition to generating contracts, she searched for the necessary information from various interfaces, such as the real estate cadastre",
       technologies: [
         "ASP.NET Core",
         "REST API",
@@ -276,13 +276,13 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "Textik - TODO",
-      technologies: ["Next.JS", "REST API"],
+      text: "Simple sites for development projects. The applications include a unified CMS in which it is possible for project directors to manage information on land areas and prices",
+      technologies: ["Next.JS", "REST API", "Bootstrap"],
     },
     {
       name: "DEGA Config",
       shortDescription: "Desktop interface for configuring gas detectors",
-      text: "Textik - TODO",
+      text: "A desktop application enabling the configuration and calibration of DEGA devices that communicate via a serial interface with a superior system. The resulting configuration and calibration settings can be printed to the appropriate logs. The device can be connected to a computer via the RS232 communication interface and further configured using this application",
       technologies: [".NET Framework", "WPF", "SQLite", "RS232 interface"],
     },
     {
@@ -296,7 +296,7 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "Textik - TODO",
+      text: "Application for processing corporate income tax returns. It enables its quick, efficient and professional creation. Using the application, it is possible to manage tax returns for groups of people as well. Accounting data can be manipulated here using an interactive spreadsheet interface",
       technologies: [".NET Framework", "WinForms", "MSSQL"],
     },
     {
@@ -310,21 +310,8 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "Textik - TODO",
+      text: "A calendar application for organizing people in a company. It is possible to create events, contacts and tasks that need to be worked on. It is possible to invite other people from the organization to these events and share the calendar with them. It is also possible to make phone calls and send push notifications in the event of an upcoming event via the application",
       technologies: ["Xamarin", "SQLite", "REST API", "Firebase"],
-    },
-    {
-      name: "AIAT Presentation Website",
-      shortDescription: "Simple presentation website built with WordPress",
-      links: [
-        {
-          text: "aiat.cz",
-          url: "https://aiat.cz/",
-          private: false,
-        },
-      ],
-      text: "Textik - TODO",
-      technologies: ["WordPress", "Envato elements", "Elementor"],
     },
     {
       name: "TuxMan FPGA",
@@ -336,7 +323,7 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "Textik - TODO",
+      text: "I designed an arcade game at the RTL level and implemented this game using a programmable gate array (FPGA). It was a graduation thesis that I submitted to the national SOČ competition. The work won third place and was nominated for an international competition held in China",
       technologies: ["VHDL", "Basys3", "VGA", "PS2"],
     },
   ],
