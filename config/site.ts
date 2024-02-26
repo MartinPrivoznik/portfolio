@@ -4,7 +4,6 @@ export const siteConfig = {
   name: "Martin Přívozník",
   description:
     "Martin Přívozník portoflio page. I'm a Full Stack software engineer, Co‑Founder of Dreamind and Web Development Lecturer.",
-  dateOfBirth: "09-20-2000",
   navItems: [
     {
       label: "Home",

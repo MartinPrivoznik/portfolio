@@ -60,6 +60,7 @@ export const ContactFormInputs = ({
                 onBlur={() => {
                   props.setFieldTouched("fullName", true);
                 }}
+                size="lg"
                 isInvalid={
                   props.errors.fullName && props.touched.fullName ? true : false
                 }
@@ -79,6 +80,7 @@ export const ContactFormInputs = ({
                 onBlur={() => {
                   props.setFieldTouched("email", true);
                 }}
+                size="lg"
                 isInvalid={
                   props.errors.email && props.touched.email ? true : false
                 }
@@ -99,6 +101,7 @@ export const ContactFormInputs = ({
               onBlur={() => {
                 props.setFieldTouched("text", true);
               }}
+              size="lg"
               isInvalid={props.errors.text && props.touched.text ? true : false}
               errorMessage={props.touched.text ? props.errors.text : undefined}
               isReadOnly={loading}
