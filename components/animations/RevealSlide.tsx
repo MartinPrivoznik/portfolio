@@ -4,7 +4,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export const RevealSlide = (props: {
-  children: JSX.Element;
+  children: React.ReactNode;
   width?: "fit-content" | "100%";
 }) => {
   const ref = useRef(null);

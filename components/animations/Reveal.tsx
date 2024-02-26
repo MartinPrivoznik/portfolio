@@ -4,7 +4,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export const Reveal = (props: {
-  children: JSX.Element;
+  children: React.ReactNode;
   fullWidth?: boolean;
 }) => {
   const ref = useRef(null);
