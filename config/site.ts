@@ -4,6 +4,7 @@ export const siteConfig = {
   name: "Martin Přívozník",
   description:
     "Martin Přívozník portoflio page. I'm a Full Stack software engineer, Co‑Founder of Dreamind and Web Development Lecturer.",
+  dateOfBirth: "09-20-2000",
   navItems: [
     {
       label: "Home",
@@ -381,4 +382,24 @@ export const siteConfig = {
       },
     ],
   },
+  aboutSections: [
+    {
+      name: "Basic information",
+      desc: "I am a {age} year old student with a passion for technology. I am currently based in Prague, where I work in software development and study at the University of Economics. My field of study is Applied Informatics, which I chose to gain knowledge in IT business",
+      imgPath: "/images/about/1-min.jpg",
+      imgWidth: 400,
+    },
+    {
+      name: "Hobbies",
+      desc: "You could say I'm a pub crawler. During the days I devote myself to work on my own projects, school and sometimes computer games. In the evenings, you can most often find me in pubs or dance clubs. During the summer I like to therapeutically shut myself away in the dark for a week to get a break from everything, or go on a water ride. When it comes down to it, I sometimes lighten up my day by trying to hack various systems",
+      imgPath: "/images/about/3-min.jpg",
+      imgWidth: 250,
+    },
+    {
+      name: "Personal goals",
+      desc: "On my way, I would like to become a solution architect and an ethical hacker. I enjoy having conversations with people who have experience in development and ethical hacking and absorbing their knowledge. But the goal remains to have a job that will fulfill me one day, and it is clear to me that this path can change several times in my life :)",
+      imgPath: "/images/about/2-min.jpg",
+      imgWidth: 200,
+    },
+  ],
 };
