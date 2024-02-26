@@ -1,4 +1,5 @@
 import { HideOnScrollSoft } from "@/components/animations/HideOnScrollSoft";
+import { CvAchievements } from "@/components/cv/Achievements";
 import { CvCommunication } from "@/components/cv/Communication";
 import { CvCurrentPosition } from "@/components/cv/CurrentPosition";
 import { CvEducation } from "@/components/cv/Education";
@@ -36,6 +37,10 @@ export default function CVPage() {
               <CvCommunication />
             </HideOnScrollSoft>
           </div>
+          <Divider />
+          <HideOnScrollSoft>
+            <CvAchievements />
+          </HideOnScrollSoft>
         </div>
       </section>
     </>

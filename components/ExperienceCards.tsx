@@ -38,7 +38,7 @@ export const ExperienceCards = (props: { title: string }) => {
               </CardHeader>
               <Divider />
               <CardBody className="h-full">
-                <p>{e.description}</p>
+                <p className="text-justify">{e.description}</p>
                 <br />
                 <div className="flex gap-2 mt-auto flex-wrap">
                   {e.skills.map((s, i) => (

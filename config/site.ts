@@ -380,5 +380,17 @@ export const siteConfig = {
         value: 83,
       },
     ],
+    achievements: [
+      {
+        name: "TuxMan, the arcade game run by FPGA",
+        subdesc: "3rd place in the SOČ competition",
+        issuer: "MŠMT ČR",
+        issuerLink: "https://www.msmt.cz/",
+        date: "Jun 2020",
+        desc: "I designed an arcade game at the RTL level and implemented this game using a programmable gate array (FPGA). It was a graduation thesis that I submitted to the national SOČ competition. The work won third place and was nominated for an international competition held in China. The project was led by a doctoral student from the FIT of CTU, engineer Petr Socha.",
+        videoEmbedLink: "https://www.youtube.com/embed/RuPYUzX7cac",
+        gitLink: "https://github.com/MartinPrivoznik/TuxMan-FPGA",
+      },
+    ],
   },
 };

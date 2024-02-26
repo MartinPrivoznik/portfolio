@@ -32,7 +32,7 @@ export const ProjectList = () => {
               ) : (
                 <span className="text-primary">Not public</span>
               )}
-              <p className="pt-2">{p.text}</p>
+              <p className="pt-2 text-justify">{p.text}</p>
               <div className="flex flex-wrap mt-3 gap-2">
                 {p.technologies.map((t, i) => (
                   <Chip key={i} color="primary">

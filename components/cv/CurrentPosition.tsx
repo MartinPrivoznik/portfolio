@@ -28,7 +28,7 @@ export const CvCurrentPosition = () => {
                 <Link href={s.url} isExternal={!s.url.startsWith("/")}>
                   {s.urlText}
                 </Link>
-                <p className="pt-2">{s.description}</p>
+                <p className="pt-2 text-justify">{s.description}</p>
               </div>
             </div>
           </Reveal>
