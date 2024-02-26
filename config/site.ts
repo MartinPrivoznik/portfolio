@@ -2,7 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Martin Přívozník",
-  description: "Portfolio page",
+  description:
+    "Martin Přívozník portoflio page. I'm a Full Stack software engineer, Co‑Founder of Dreamind and Web Development Lecturer.",
   navItems: [
     {
       label: "Home",
