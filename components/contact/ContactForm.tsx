@@ -26,15 +26,16 @@ export const ContactForm = () => {
 
   return (
     <div className="flex flex-col items-center w-full max-w-[1000px] mt-8 px-10">
-      <Reveal fullWidth>
-        {!showEmailSentView && (
+      {!showEmailSentView && (
+        <Reveal fullWidth>
           <ContactFormInputs
             loading={loading}
             errorSendingEmail={errorSendingEmail}
             handleSubmit={handleSubmit}
           />
-        )}
-      </Reveal>
+        </Reveal>
+      )}
+
       {showEmailSentView && (
         <EmailSentView setShowEmailSentView={setShowEmailSentView} />
       )}
