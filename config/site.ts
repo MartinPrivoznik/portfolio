@@ -324,7 +324,7 @@ export const siteConfig = {
         },
       ],
       text: "I designed an arcade game at the RTL level and implemented this game using a programmable gate array (FPGA). It was a graduation thesis that I submitted to the national SOČ competition. The work won third place and was nominated for an international competition held in China",
-      technologies: ["VHDL", "Basys3", "VGA", "PS2"],
+      technologies: ["VHDL", "Basys2", "VGA", "PS2"],
     },
   ],
   cv: {
