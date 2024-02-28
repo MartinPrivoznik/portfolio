@@ -342,20 +342,20 @@ export const siteConfig = {
         value: 85,
       },
       {
-        name: "Angular",
-        value: 60,
-      },
-      {
         name: "NoSQL",
         value: 70,
       },
       {
-        name: "PHP",
-        value: 55,
+        name: "Angular",
+        value: 60,
       },
       {
         name: "C/C++",
         value: 60,
+      },
+      {
+        name: "PHP",
+        value: 55,
       },
     ],
     communicationSkills: [

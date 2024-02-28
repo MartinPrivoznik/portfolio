@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@nextui-org/button";
 import { Reveal } from "../animations/Reveal";
 import { subtitle } from "../primitives";

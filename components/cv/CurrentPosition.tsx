@@ -1,5 +1,3 @@
-"use client";
-
 import { siteConfig } from "@/config/site";
 import { RevealSlide } from "../animations/RevealSlide";
 import { subtitle } from "../primitives";

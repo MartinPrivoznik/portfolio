@@ -1,9 +1,8 @@
 "use client";
 
 import { Input, Textarea } from "@nextui-org/input";
-import { Reveal } from "../animations/Reveal";
 import { Form, Formik } from "formik";
-import * as Yup from "yup";
+import { string, object } from "yup";
 import { Button } from "@nextui-org/button";
 import { Spinner } from "@nextui-org/spinner";
 import { ContactFormType } from "@/types";
@@ -25,15 +24,15 @@ export const ContactFormInputs = ({
     text: "",
   } as ContactFormType;
 
-  const contactFormValidationSchema = Yup.object().shape({
-    fullName: Yup.string()
+  const contactFormValidationSchema = object().shape({
+    fullName: string()
       .required("Field required")
       .max(100, "Enter a maximum of 80 characters"),
-    email: Yup.string()
+    email: string()
       .email("Enter a valid email address")
       .required("Field required")
       .max(100, "Enter a maximum of 80 characters"),
-    text: Yup.string()
+    text: string()
       .required("Field required")
       .max(1000, "Enter a maximum of 1000 characters"),
   });
