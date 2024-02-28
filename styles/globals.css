@@ -10,10 +10,6 @@ html, body {
     transition: right 1s;
 }
 
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px black inset !important;
-  }
-
 @media only screen and (max-width: 1023px) {
     .hero-image {
         max-height: 100%;
@@ -25,6 +21,10 @@ input:-webkit-autofill {
     .subpage-hero-image {
         max-height: 100%;
         max-width: none;
+    }
+
+    .backdrop-div {
+        display: none;
     }
 }
 
