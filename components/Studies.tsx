@@ -1,5 +1,3 @@
-"use client";
-
 import { siteConfig } from "@/config/site";
 import { Card, CardHeader, CardBody } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
@@ -7,7 +5,7 @@ import { subtitle } from "./primitives";
 import { Reveal } from "./animations/Reveal";
 import { RevealSlide } from "./animations/RevealSlide";
 
-export const Studies = (props: { title: string }) => {
+export const Studies = async (props: { title: string }) => {
   return (
     <div className="flex flex-col justify-center items-center h-full px-4">
       <RevealSlide width="fit-content">
@@ -23,7 +21,7 @@ export const Studies = (props: { title: string }) => {
                 <p className="text-tiny uppercase font-bold">{e.name}</p>
                 <small className="text-default-500">{e.period}</small>
                 <small className="text-default-500">{e.status}</small>
-                <h4 className="font-bold text-medium">{e.field}</h4>
+                <h3 className="font-bold text-medium">{e.field}</h3>
               </CardHeader>
               <CardBody className="overflow-visible py-2 flex justify-center items-center">
                 <Image

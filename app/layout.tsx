@@ -4,9 +4,9 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { CursorGradient } from "@/components/animations/CursorGradient";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
 };
@@ -40,15 +39,7 @@ export default function RootLayout({
             <CursorGradient />
             <Navbar />
             <main className="w-full flex-grow">{children}</main>
-            <footer className="w-full flex items-center justify-center py-3">
-              <span className="text-default-600">
-                Copyright © {new Date().getFullYear()}
-              </span>
-              <Link href="/" className="text-primary pl-1">
-                {" "}
-                Martin Přívozník
-              </Link>
-            </footer>
+            <Footer />
           </div>
         </Providers>
       </body>

@@ -1,5 +1,3 @@
-"use client";
-
 import { siteConfig } from "@/config/site";
 import { Divider } from "@nextui-org/divider";
 import { subtitle } from "./primitives";
@@ -7,7 +5,7 @@ import { Chip } from "@nextui-org/chip";
 import { Reveal } from "./animations/Reveal";
 import { Link } from "@nextui-org/link";
 
-export const ProjectList = () => {
+export const ProjectList = async () => {
   return (
     <div className="container flex flex-col justify-center items-center w-full mt-5 mb-5">
       {siteConfig.projects.map((p, i) => (

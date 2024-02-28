@@ -1,16 +1,18 @@
-"use client";
-
 import { subtitle, title } from "./primitives";
 import Link from "next/link";
 import { RevealSlide } from "./animations/RevealSlide";
 
-export const HeroText = () => {
+export const HeroText = async () => {
   return (
     <div>
       <RevealSlide width="fit-content">
         <div>
-          <h1 className={title({ size: "lg" })}>Hello, I&apos;m&nbsp;</h1>
-          <h1 className={title({ color: "violet", size: "lg" })}>Martin</h1>
+          <h1 className={title({ size: "lg" })}>
+            Hello, I&apos;m&nbsp;
+            <span className={title({ color: "violet", size: "lg" })}>
+              Martin
+            </span>
+          </h1>
         </div>
       </RevealSlide>
       <br />
