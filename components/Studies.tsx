@@ -5,7 +5,7 @@ import { subtitle } from "./primitives";
 import { Reveal } from "./animations/Reveal";
 import { RevealSlide } from "./animations/RevealSlide";
 
-export const Studies = async (props: { title: string }) => {
+export const Studies = (props: { title: string }) => {
   return (
     <div className="flex flex-col justify-center items-center h-full px-4">
       <RevealSlide width="fit-content">

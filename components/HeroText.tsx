@@ -2,7 +2,7 @@ import { subtitle, title } from "./primitives";
 import Link from "next/link";
 import { RevealSlide } from "./animations/RevealSlide";
 
-export const HeroText = async () => {
+export const HeroText = () => {
   return (
     <div>
       <RevealSlide width="fit-content">
