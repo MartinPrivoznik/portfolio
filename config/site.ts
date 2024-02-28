@@ -384,7 +384,7 @@ export const siteConfig = {
   aboutSections: [
     {
       name: "Basic information",
-      desc: "I am a {age} year old student with a passion for technology. I am currently based in Prague, where I work in software development and study at the University of Economics. My field of study is Applied Informatics, which I chose to gain knowledge in IT business",
+      desc: "My name is Martin Přívozník. I am a {age} year old student with a passion for technology. I am currently based in Prague, where I work in software development and study at the University of Economics. My field of study is Applied Informatics, which I chose to gain knowledge in IT business",
       imgPath: "/images/about/1-min.jpg",
       imgWidth: 400,
     },

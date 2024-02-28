@@ -35,7 +35,7 @@ export const AboutMeList = () => {
           >
             <div className="w-full flex flex-col justify-center">
               <RevealSlide width="fit-content">
-                <h2 className={subtitle({ class: "mt-2" })}>{p.name}</h2>
+                <h3 className={subtitle({ class: "mt-2" })}>{p.name}</h3>
               </RevealSlide>
               <Reveal>
                 <p className="text-justify">{formatString(p.desc)}</p>

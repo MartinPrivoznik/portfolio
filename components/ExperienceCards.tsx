@@ -13,9 +13,9 @@ export const ExperienceCards = (props: { title: string }) => {
   return (
     <div className="flex flex-col justify-center items-center h-full px-4">
       <RevealSlide width="fit-content">
-        <h2 className={subtitle({ class: "mt-2 text-center" })}>
+        <h3 className={subtitle({ class: "mt-2 text-center" })}>
           {props.title}
-        </h2>
+        </h3>
       </RevealSlide>
       <div className="flex pt-4 gap-5 flex-wrap justify-center">
         {siteConfig.experiences.map((e, i) => (

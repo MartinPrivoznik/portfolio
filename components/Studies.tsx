@@ -9,9 +9,9 @@ export const Studies = (props: { title: string }) => {
   return (
     <div className="flex flex-col justify-center items-center h-full px-4">
       <RevealSlide width="fit-content">
-        <h2 className={subtitle({ class: "mt-2 text-center" })}>
+        <h3 className={subtitle({ class: "mt-2 text-center" })}>
           {props.title}
-        </h2>
+        </h3>
       </RevealSlide>
       <div className="flex pt-4 gap-5 flex-wrap justify-center">
         {siteConfig.studies.map((e, i) => (
@@ -21,7 +21,7 @@ export const Studies = (props: { title: string }) => {
                 <p className="text-tiny uppercase font-bold">{e.name}</p>
                 <small className="text-default-500">{e.period}</small>
                 <small className="text-default-500">{e.status}</small>
-                <h3 className="font-bold text-medium">{e.field}</h3>
+                <span className="font-bold text-medium">{e.field}</span>
               </CardHeader>
               <CardBody className="overflow-visible py-2 flex justify-center items-center">
                 <Image

@@ -11,9 +11,9 @@ export const CvAchievements = () => {
   return (
     <div className="flex flex-col items-center w-full max-w-[1000px]">
       <RevealSlide width="fit-content">
-        <h2 className={subtitle({ class: "mt-2 text-center" })}>
+        <h3 className={subtitle({ class: "mt-2 text-center" })}>
           Achievements
-        </h2>
+        </h3>
       </RevealSlide>
       <div className="px-5 w-full">
         {siteConfig.cv.achievements.map((s, i) => (

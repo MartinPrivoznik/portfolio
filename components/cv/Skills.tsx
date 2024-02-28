@@ -18,7 +18,7 @@ export const CvSkills = () => {
   return (
     <div className="flex flex-col items-center w-full px-5">
       <RevealSlide width="fit-content">
-        <h2 className={subtitle({ class: "mt-2 text-center" })}>Skills</h2>
+        <h3 className={subtitle({ class: "mt-2 text-center" })}>Skills</h3>
       </RevealSlide>
       <div className="flex flex-col gap-3 w-full max-w-[500px] min-w-[320px] px-5">
         {skillsSorted &&
