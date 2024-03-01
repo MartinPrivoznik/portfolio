@@ -46,13 +46,12 @@ export const RevealSlide = (props: {
         initial="hidden"
         transition={{ duration: 0.5, ease: "easeIn" }}
         animate={slideControls}
+        className="absolute bg-primary"
         style={{
-          position: "absolute",
           top: 4,
           bottom: 4,
           left: 0,
           right: 0,
-          background: "#b249f8",
           zIndex: 20,
         }}
       />

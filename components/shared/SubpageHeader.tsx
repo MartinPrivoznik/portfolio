@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import theme from "tailwindcss/defaultTheme";
 import { HideOnScroll } from "../animations/HideOnScroll";
 import { subtitle } from "../primitives";
 import { RevealSlide } from "../animations/RevealSlide";
@@ -32,11 +33,6 @@ export const SubpageHeader = (props: {
           content: "";
           width: ${props.imgWidth}px;
           height: ${props.imgHeight}px;
-          background: linear-gradient(
-            to left,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 1) 90%
-          );
           transition: right 1s;
         }
       `}</style>
@@ -116,7 +112,7 @@ export const SubpageHeader = (props: {
             </div>
           </motion.div>
           {!props.pngImg && (
-            <div className="absolute -right-[200px] bottom-0 md:right-0 block img-grow"></div>
+            <div className="absolute -right-[200px] bottom-0 md:right-0 block img-grow bg-gradient-to-l from-transparent to-white dark:to-black to-90%"></div>
           )}
         </div>
       </HideOnScroll>

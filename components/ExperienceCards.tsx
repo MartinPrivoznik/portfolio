@@ -18,7 +18,7 @@ export const ExperienceCards = (props: { title: string }) => {
       <div className="flex pt-4 gap-5 flex-wrap justify-center">
         {siteConfig.experiences.map((e, i) => (
           <Reveal key={i}>
-            <Card className="max-w-[400px] h-full">
+            <Card className="max-w-[400px] h-full border-gray-600 border-1 dark:border-0">
               <CardHeader className="flex gap-3">
                 <Image
                   alt="nextui logo"

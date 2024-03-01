@@ -9,7 +9,7 @@ export const HeroText = () => {
         <div>
           <h2 className={title({ size: "lg" })}>
             Hello, I&apos;m&nbsp;
-            <span className={title({ color: "violet", size: "lg" })}>
+            <span className={title({ color: "primary", size: "lg" })}>
               Martin
             </span>
           </h2>

@@ -18,6 +18,7 @@ import { GithubIcon, DiscordIcon, LinkedInIcon } from "@/components/icons";
 import { Logo } from "@/components/icons";
 import { useEffect, useReducer, useState } from "react";
 import { usePathname } from "next/navigation";
+import { ThemeSwitch } from "./theme-switch";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -41,7 +42,7 @@ export const Navbar = () => {
             <h1 className="font-bold text-inherit">Martin Přívozník</h1>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden sm:flex gap-4 justify-start ml-5">
+        <ul className="hidden sm:flex gap-4 justify-start ml-0 md:ml-5">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -73,7 +74,7 @@ export const Navbar = () => {
           <Link isExternal href={siteConfig.links.github} aria-label="Github">
             <GithubIcon className="text-default-500" />
           </Link>
-          {/* <ThemeSwitch /> */}
+          <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden md:flex"></NavbarItem>
       </NavbarContent>
@@ -82,7 +83,7 @@ export const Navbar = () => {
         <Link isExternal href={siteConfig.links.github} aria-label="Github">
           <GithubIcon className="text-default-500" />
         </Link>
-        {/* <ThemeSwitch /> */}
+        <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
 

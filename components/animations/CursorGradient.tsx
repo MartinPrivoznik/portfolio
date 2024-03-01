@@ -1,11 +1,13 @@
 "use client";
 
+import { useTheme } from "next-themes";
 import React, { useEffect, useRef, useState } from "react";
 
 export const CursorGradient = () => {
   const [x, setX] = useState<number>();
   const [y, setY] = useState<number>();
   const [lastMouseYOffset, _setLastMouseYOffset] = useState<number>();
+  const { theme } = useTheme();
 
   const lastMouseYOffsetRef = useRef(lastMouseYOffset);
   const setLastMouseYOffset = (n: number) => {
@@ -41,7 +43,7 @@ export const CursorGradient = () => {
         .backdrop-div {
           background-image: radial-gradient(
             300px at ${x}px ${y}px,
-            #fff,
+            ${theme == "dark" ? "#fff" : "#000"},
             transparent 80%
           );
         }

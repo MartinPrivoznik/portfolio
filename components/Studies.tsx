@@ -16,7 +16,7 @@ export const Studies = (props: { title: string }) => {
       <div className="flex pt-4 gap-5 flex-wrap justify-center">
         {siteConfig.studies.map((e, i) => (
           <Reveal key={i}>
-            <Card className="max-w-[300px] h-full">
+            <Card className="max-w-[300px] h-full border-gray-600 border-1 dark:border-0">
               <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <p className="text-tiny uppercase font-bold">{e.name}</p>
                 <small className="text-default-500">{e.period}</small>
