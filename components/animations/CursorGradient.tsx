@@ -39,16 +39,12 @@ export const CursorGradient = () => {
 
   return (
     <>
-      <style jsx>{`
-        .backdrop-div {
-          background-image: radial-gradient(
-            300px at ${x}px ${y}px,
-            ${theme == "dark" ? "#fff" : "#000"},
-            transparent 80%
-          );
-        }
-      `}</style>
-      <div className="fixed pointer-events-none opacity-10 inset-0 z-50 lg:absolute transition duration-300 backdrop-div"></div>
+      <div
+        className="fixed pointer-events-none opacity-10 inset-0 z-50 lg:absolute transition duration-300 backdrop-div"
+        style={{
+          backgroundImage: `radial-gradient(300px at ${x}px ${y}px, #fff, transparent 80%)`,
+        }}
+      ></div>
     </>
   );
 };
