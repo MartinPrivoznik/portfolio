@@ -327,6 +327,12 @@ export const siteConfig = {
       technologies: ["VHDL", "Basys2", "VGA", "PS2"],
     },
   ],
+  uselessProjects: [
+    {
+      url: "/projects/middleFinger",
+      imgPath: "/images/uselessProjects/middleFinger/thumbnail.jpg",
+    },
+  ],
   cv: {
     skills: [
       {

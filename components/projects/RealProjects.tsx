@@ -1,13 +1,13 @@
 import { siteConfig } from "@/config/site";
 import { Divider } from "@nextui-org/divider";
-import { subtitle } from "./primitives";
+import { subtitle } from "../primitives";
 import { Chip } from "@nextui-org/chip";
-import { Reveal } from "./animations/Reveal";
+import { Reveal } from "../animations/Reveal";
 import { Link } from "@nextui-org/link";
 
-export const ProjectList = () => {
+export const RealProjects = () => {
   return (
-    <div className="container flex flex-col justify-center items-center w-full mt-5 mb-5">
+    <>
       {siteConfig.projects.map((p, i) => (
         <Reveal key={i} fullWidth>
           <div className="w-full px-6 md:px-24 lg:px-32 xl:px-64 mt-5">
@@ -43,6 +43,6 @@ export const ProjectList = () => {
           </div>
         </Reveal>
       ))}
-    </div>
+    </>
   );
 };

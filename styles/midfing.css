@@ -1,0 +1,9 @@
+.midfing {
+    transform: translate3d(-50%, -50%, 0);
+    position: absolute;
+    height: 249px;
+    width: 250px;
+    left: 50%;
+    top: 50%;
+    background-image: url(/images/uselessProjects/middleFinger/full.jpg);
+}
