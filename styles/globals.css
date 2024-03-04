@@ -2,29 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-    min-height: 100vh;
+html,
+body {
+  min-height: 100vh;
 }
 
-.hero-image, .subpage-hero-image {
-    transition: right 1s;
+.hero-image,
+.subpage-hero-image {
+  transition: right 1s;
 }
 
 @media only screen and (max-width: 1023px) {
-    .hero-image {
-        max-height: 100%;
-        width: auto;
-    }
+  .hero-image {
+    max-height: 100%;
+    width: auto;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .subpage-hero-image {
-        max-height: 100%;
-        max-width: none;
-    }
+  .subpage-hero-image {
+    max-height: 100%;
+    max-width: none;
+  }
 
-    .backdrop-div {
-        display: none;
-    }
+  .backdrop-div {
+    display: none;
+  }
 }
-
