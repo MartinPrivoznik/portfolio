@@ -22,26 +22,28 @@ export const MiddleFinger = () => {
     };
   }, []);
 
-  const isInBounds = (boundAxis: number) => {
-    const rightBoundMax = rightBound - leftBound;
-    return boundAxis > 0 && boundAxis < rightBoundMax;
-  };
+  useEffect(() => {
+    const isInBounds = (boundAxis: number) => {
+      const rightBoundMax = rightBound - leftBound;
+      return boundAxis > 0 && boundAxis < rightBoundMax;
+    };
 
-  const leftBound = window.document.body.clientWidth * 0.2;
-  const rightBound = window.document.body.clientWidth * 0.8;
-  const boundsWidth = rightBound - leftBound;
-  const treshHoldWidth = boundsWidth / imageCount;
+    const leftBound = window.document.body.clientWidth * 0.2;
+    const rightBound = window.document.body.clientWidth * 0.8;
+    const boundsWidth = rightBound - leftBound;
+    const treshHoldWidth = boundsWidth / imageCount;
 
-  const boundPosition = x - leftBound;
-  const backgroundIndex = Math.floor(boundPosition / treshHoldWidth);
-  const newBackgroundPositionX = backgroundIndex * imageWidth * -1;
+    const boundPosition = x - leftBound;
+    const backgroundIndex = Math.floor(boundPosition / treshHoldWidth);
+    const newBackgroundPositionX = backgroundIndex * imageWidth * -1;
 
-  if (
-    isInBounds(boundPosition) &&
-    newBackgroundPositionX !== backgroundPositionX
-  ) {
-    setBackgroundPositionX(newBackgroundPositionX);
-  }
+    if (
+      isInBounds(boundPosition) &&
+      newBackgroundPositionX !== backgroundPositionX
+    ) {
+      setBackgroundPositionX(newBackgroundPositionX);
+    }
+  }, [x, backgroundPositionX]);
 
   return (
     <div
