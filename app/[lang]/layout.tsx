@@ -2,11 +2,12 @@ import "@/styles/globals.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Providers } from "./providers";
+import { Providers } from "../providers";
 import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
 import { CursorGradient } from "@/components/animations/CursorGradient";
 import { Footer } from "@/components/Footer";
+import { IInternationalizedPageParams } from "@/models/IInternationalizedPageParams";
 
 export const metadata: Metadata = {
   title: {
@@ -15,18 +16,20 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/public/favicon.ico",
+    apple: "/public/apple-touch-icon.png",
   },
 };
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: IInternationalizedPageParams;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={params.lang} suppressHydrationWarning>
       <head />
       <body
         className={clsx(

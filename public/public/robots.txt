@@ -6,4 +6,4 @@ User-agent: *
 Disallow:
 Crawl-Delay: 5
 
-Sitemap: https://privoznik.dev/sitemap.xml
+Sitemap: https://privoznik.dev/public/sitemap.xml
