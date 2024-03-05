@@ -16,12 +16,14 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import { GithubIcon, DiscordIcon, LinkedInIcon } from "@/components/icons";
 import { Logo } from "@/components/icons";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ThemeSwitch } from "./theme-switch";
 import { buildUrl } from "@/helpers/UrlBuilder";
+import { useTranslation } from "@/app/i18n/client";
 
 export const Navbar = (props: { lang: string }) => {
+  const { t } = useTranslation(props.lang);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const path = usePathname();
 
@@ -57,7 +59,7 @@ export const Navbar = (props: { lang: string }) => {
                 color="foreground"
                 href={buildUrl(props.lang, item.href)}
               >
-                {item.label}
+                {t(item.label)}
               </NextLink>
             </NavbarItem>
           ))}
@@ -104,7 +106,7 @@ export const Navbar = (props: { lang: string }) => {
                 href={buildUrl(props.lang, item.href)}
                 size="lg"
               >
-                {item.label}
+                {t(item.label)}
               </Link>
             </NavbarMenuItem>
           ))}

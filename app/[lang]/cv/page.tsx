@@ -6,9 +6,14 @@ import { CvEducation } from "@/components/cv/Education";
 import { CvEmploymentHistory } from "@/components/cv/EmploymentHistory";
 import { CvPageHeading } from "@/components/cv/PageHeading";
 import { CvSkills } from "@/components/cv/Skills";
+import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
 import { Divider } from "@nextui-org/divider";
 
-export default function CVPage() {
+export default function CVPage({
+  params,
+}: {
+  params: IInternationalizedPageParams;
+}) {
   return (
     <>
       <CvPageHeading />
@@ -16,7 +21,7 @@ export default function CVPage() {
         <div className="container flex flex-col items-center justify-center gap-4">
           <div className="flex flex-col lg:flex-row w-full">
             <HideOnScrollSoft fullWidth>
-              <CvCurrentPosition />
+              <CvCurrentPosition lang={params.lang} />
             </HideOnScrollSoft>
             <Divider className="lg:hidden" />
             <HideOnScrollSoft fullWidth>
@@ -25,12 +30,12 @@ export default function CVPage() {
           </div>
           <Divider />
           <HideOnScrollSoft>
-            <CvEmploymentHistory />
+            <CvEmploymentHistory lang={params.lang} />
           </HideOnScrollSoft>
           <Divider />
           <div className="flex flex-col lg:flex-row w-full">
             <HideOnScrollSoft fullWidth>
-              <CvEducation />
+              <CvEducation lang={params.lang} />
             </HideOnScrollSoft>
             <Divider className="lg:hidden" />
             <HideOnScrollSoft fullWidth>

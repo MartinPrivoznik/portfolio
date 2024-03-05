@@ -1,12 +1,19 @@
+import { useTranslation } from "@/app/i18n";
 import { AboutMeList } from "@/components/about/AboutMeList";
 import { SubpageHeader } from "@/components/shared/SubpageHeader";
+import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
 
-export default function AboutPage() {
+export default async function AboutPage({
+  params,
+}: {
+  params: IInternationalizedPageParams;
+}) {
+  const { t } = await useTranslation(params.lang);
   return (
     <>
       <SubpageHeader
-        heading="About me"
-        subheading="Some kind words about my livelihood"
+        heading={t("aboutMe")}
+        subheading={t("aboutMeSubheading")}
         imgSrc="/images/about-hero-min.png"
         imgWidth={420}
         imgHeight={400}

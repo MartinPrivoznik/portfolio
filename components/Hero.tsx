@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 import { HideOnScroll } from "./animations/HideOnScroll";
 import { useRef } from "react";
 
-export const Hero = () => {
+export const Hero = (props: { lang: string }) => {
   const imgRef = useRef(null);
   const mainControls = useAnimation();
 
@@ -19,7 +19,7 @@ export const Hero = () => {
       <div className="flex relative w-full px-5 md:px-24 border-b border-zinc-700 min-h-[240px]">
         <div className="hidden lg:block w-1/6"></div>
         <div className="w-2/3 lg:w-2/6 flex items-center justify-center">
-          <HeroText />
+          <HeroText lang={props.lang} />
         </div>
         <motion.div
           ref={imgRef}

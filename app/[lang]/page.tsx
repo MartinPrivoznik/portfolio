@@ -9,25 +9,30 @@ import { RevealSlide } from "@/components/animations/RevealSlide";
 import { subtitle } from "@/components/primitives";
 import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
 import { buildUrl } from "@/helpers/UrlBuilder";
+import { useTranslation } from "../i18n";
 
-export default function Home({
+export default async function Home({
   params,
 }: {
   params: IInternationalizedPageParams;
 }) {
+  const { t } = await useTranslation(params.lang);
   return (
     <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 w-full overflow-x-hidden pt-16">
-      <Hero />
+      <Hero lang={params.lang} />
       <div className="container flex flex-col items-center justify-center gap-4">
-        <CurrentPositionCards title="Current positions" />
+        <CurrentPositionCards
+          title={t("currentPositions")}
+          lang={params.lang}
+        />
         <Divider />
-        <ExperienceCards title="Experience roadmap" />
+        <ExperienceCards title={t("experienceRoadmap")} lang={params.lang} />
         <Divider />
-        <Studies title="Map of studies" />
+        <Studies title={t("mapOfStudies")} lang={params.lang} />
         <Divider />
         <RevealSlide width="fit-content">
           <h2 className={subtitle({ class: "mt-2 text-center" })}>
-            Wanna know more?
+            {t("wannaKnowMore")}
           </h2>
         </RevealSlide>
         <Link
@@ -38,7 +43,7 @@ export default function Home({
             variant: "shadow",
           })}
         >
-          About me
+          {t("aboutMe")}
         </Link>
       </div>
     </section>

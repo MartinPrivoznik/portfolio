@@ -1,16 +1,20 @@
+"use client";
+
 import { subtitle, title } from "./primitives";
 import Link from "next/link";
 import { RevealSlide } from "./animations/RevealSlide";
+import { useTranslation } from "@/app/i18n/client";
 
-export const HeroText = () => {
+export const HeroText = (props: { lang: string }) => {
+  const { t } = useTranslation(props.lang);
   return (
     <div>
       <RevealSlide width="fit-content">
         <div>
           <h2 className={title({ size: "lg" })}>
-            Hello, I&apos;m&nbsp;
+            {t("helloIm")}&nbsp;
             <span className={title({ color: "primary", size: "lg" })}>
-              Martin
+              {t("martin")}
             </span>
           </h2>
         </div>
@@ -18,11 +22,11 @@ export const HeroText = () => {
       <br />
       <RevealSlide width="fit-content">
         <h3 className={subtitle({ class: "mt-2" })}>
-          Full Stack software engineer, Co&#8209;Founder of{" "}
+          {t("heroSubheading1")}{" "}
           <Link href="https://dreamind.cz/" target="_blank">
             Dreamind
           </Link>{" "}
-          and Web&nbsp;Development&nbsp;Lecturer
+          {t("heroSubheading2")}
         </h3>
       </RevealSlide>
     </div>

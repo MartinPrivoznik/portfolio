@@ -6,8 +6,13 @@ import { subtitle } from "./primitives";
 import { Reveal } from "./animations/Reveal";
 import { RevealSlide } from "./animations/RevealSlide";
 import { Chip } from "@nextui-org/chip";
+import { useTranslation } from "@/app/i18n";
 
-export const ExperienceCards = (props: { title: string }) => {
+export const ExperienceCards = async (props: {
+  title: string;
+  lang: string;
+}) => {
+  const { t } = await useTranslation(props.lang);
   return (
     <div className="flex flex-col justify-center items-center h-full px-4">
       <RevealSlide width="fit-content">
@@ -29,14 +34,14 @@ export const ExperienceCards = (props: { title: string }) => {
                 />
                 <div className="flex flex-col">
                   <p className="text-md">
-                    {e.role} at {e.name}
+                    {t(e.role)} at {e.name}
                   </p>
                   <p className="text-small text-default-500">{e.urlText}</p>
                 </div>
               </CardHeader>
               <Divider />
               <CardBody className="h-full">
-                <p className="text-justify">{e.description}</p>
+                <p className="text-justify">{t(e.description)}</p>
                 <br />
                 <div className="flex gap-2 mt-auto flex-wrap">
                   {e.skills.map((s, i) => (
@@ -50,7 +55,7 @@ export const ExperienceCards = (props: { title: string }) => {
               <Divider />
               <CardFooter>
                 <p>
-                  {e.period} - {e.length}
+                  {t(e.period)} - {t(e.length)}
                 </p>
               </CardFooter>
             </Card>

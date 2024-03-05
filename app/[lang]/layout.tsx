@@ -8,6 +8,7 @@ import clsx from "clsx";
 import { CursorGradient } from "@/components/animations/CursorGradient";
 import { Footer } from "@/components/Footer";
 import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
+import { dir } from "i18next";
 
 export const metadata: Metadata = {
   title: {
@@ -21,6 +22,10 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateStaticParams() {
+  return siteConfig.siteLocales.map((lng) => ({ lng }));
+}
+
 export default function RootLayout({
   children,
   params,
@@ -29,7 +34,7 @@ export default function RootLayout({
   params: IInternationalizedPageParams;
 }) {
   return (
-    <html lang={params.lang} suppressHydrationWarning>
+    <html lang={params.lang} dir={dir(params.lang)} suppressHydrationWarning>
       <head />
       <body
         className={clsx(
