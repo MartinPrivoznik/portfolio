@@ -1,3 +1,3 @@
-export interface IInternationalizedPageParams {
+export default interface IInternationalizedPageParams {
   lang: string;
 }

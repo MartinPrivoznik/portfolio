@@ -7,7 +7,7 @@ import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
 import { CursorGradient } from "@/components/animations/CursorGradient";
 import { Footer } from "@/components/Footer";
-import { IInternationalizedPageParams } from "@/models/IInternationalizedPageParams";
+import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
 
 export const metadata: Metadata = {
   title: {

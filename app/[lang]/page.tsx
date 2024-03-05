@@ -7,9 +7,9 @@ import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { RevealSlide } from "@/components/animations/RevealSlide";
 import { subtitle } from "@/components/primitives";
-import { IInternationalizedPageParams } from "@/models/IInternationalizedPageParams";
+import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
 
-export default function Home({ lang }: IInternationalizedPageParams) {
+export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 w-full overflow-x-hidden pt-16">
       <Hero />
