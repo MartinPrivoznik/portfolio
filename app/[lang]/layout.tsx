@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/public/favicon.ico",
-    apple: "/public/apple-touch-icon.png",
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -40,9 +40,9 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col min-h-screen">
             <CursorGradient />
-            <Navbar />
+            <Navbar lang={params.lang} />
             <main className="w-full flex-grow">{children}</main>
-            <Footer />
+            <Footer lang={params.lang} />
           </div>
         </Providers>
       </body>

@@ -2,9 +2,14 @@
 
 import { ProjectList } from "@/components/projects/ProjectList";
 import { SubpageHeader } from "@/components/shared/SubpageHeader";
+import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
 import { useState } from "react";
 
-export default function ProjectsPage() {
+export default function ProjectsPage({
+  params,
+}: {
+  params: IInternationalizedPageParams;
+}) {
   const [uselessProjects, setUselessProjects] = useState<boolean>(false);
 
   return (
@@ -22,6 +27,7 @@ export default function ProjectsPage() {
         <ProjectList
           uselessProjects={uselessProjects}
           setUselessProjects={setUselessProjects}
+          lang={params.lang}
         />
       </div>
     </>

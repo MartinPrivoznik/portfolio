@@ -8,8 +8,13 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { RevealSlide } from "@/components/animations/RevealSlide";
 import { subtitle } from "@/components/primitives";
 import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
+import { buildUrl } from "@/helpers/UrlBuilder";
 
-export default function Home() {
+export default function Home({
+  params,
+}: {
+  params: IInternationalizedPageParams;
+}) {
   return (
     <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 w-full overflow-x-hidden pt-16">
       <Hero />
@@ -26,7 +31,7 @@ export default function Home() {
           </h2>
         </RevealSlide>
         <Link
-          href={"/about"}
+          href={buildUrl(params.lang, "/about")}
           className={buttonStyles({
             color: "primary",
             radius: "full",

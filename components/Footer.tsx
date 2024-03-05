@@ -1,5 +1,6 @@
 "use client";
 
+import { buildUrl } from "@/helpers/UrlBuilder";
 import { Link } from "@nextui-org/link";
 import {
   FacebookShareButton,
@@ -14,14 +15,14 @@ import {
   EmailIcon,
 } from "next-share";
 
-export const Footer = () => {
+export const Footer = (props: { lang: string }) => {
   return (
     <footer className="w-full flex flex-col items-center justify-center py-3">
       <div className="w-full flex items-center justify-center">
         <span className="text-default-600">
           Copyright © {new Date().getFullYear()}
         </span>
-        <Link href="/" className="text-primary pl-1">
+        <Link href={buildUrl(props.lang, "/")} className="text-primary pl-1">
           {" "}
           Martin Přívozník
         </Link>

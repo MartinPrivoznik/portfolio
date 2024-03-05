@@ -4,7 +4,7 @@ import { Reveal } from "../animations/Reveal";
 import { Link } from "@nextui-org/link";
 import { Image } from "@nextui-org/image";
 
-export const UselessProjects = () => {
+export const UselessProjects = (props: { lang: string }) => {
   return (
     <div className="w-full flex justify-center mt-7 flex-wrap gap-10">
       {siteConfig.uselessProjects.map((p, i) => (
