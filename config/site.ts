@@ -331,6 +331,12 @@ export const siteConfig = {
     {
       url: "/projects/middleFinger",
       imgPath: "/images/uselessProjects/middleFinger/thumbnail.jpg",
+      isExternal: false,
+    },
+    {
+      url: "https://420-countdown-martinprivoznik.vercel.app/",
+      imgPath: "/images/uselessProjects/420-countdown/420-mascot.webp",
+      isExternal: true,
     },
   ],
   cv: {

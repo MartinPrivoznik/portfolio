@@ -6,18 +6,17 @@ import { Image } from "@nextui-org/image";
 
 export const UselessProjects = () => {
   return (
-    <div className="w-full flex justify-center mt-7">
+    <div className="w-full flex justify-center mt-7 flex-wrap gap-10">
       {siteConfig.uselessProjects.map((p, i) => (
         <Reveal key={i}>
-          <Link href={p.url} isExternal={false}>
+          <Link href={p.url} isExternal={p.isExternal}>
             <Image
               alt={p.url}
-              className="object-cover rounded-xl"
+              className="object-cover rounded-xl max-h-[270px]"
               src={p.imgPath}
-              width={270}
+              height={270}
             />
           </Link>
-          <Divider />
         </Reveal>
       ))}
     </div>
