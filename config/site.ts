@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Martin Přívozník",
   description:
     "Martin Přívozník portoflio page. I'm a Full Stack software engineer, Co‑Founder of Dreamind and Web Development Lecturer.",
-  siteLocales: ["en", "cs", "chewbacca"],
+  siteLocales: ["en", "cs", "chewbacca", "groot"],
   defaultLocales: "en",
   navItems: [
     {
