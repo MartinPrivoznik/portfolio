@@ -1,7 +1,6 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
-import { Button } from "@nextui-org/button";
 import {
   Dropdown,
   DropdownItem,
