@@ -20,7 +20,7 @@ export const CvEmploymentHistory = async (props: { lang: string }) => {
             <div className="w-full">
               <div className="flex flex-col w-full px-5 pb-5">
                 <h2 className={subtitle({ class: "mt-2 mb-0" })}>
-                  {t(s.role)} at {s.name}
+                  {t(s.role)} {t("at")} {s.name}
                 </h2>
                 <span className="text-small text-default-500">
                   {t(s.period)} - {t(s.length)}
