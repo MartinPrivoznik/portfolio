@@ -15,4 +15,20 @@
     <url>
         <loc>https://privoznik.dev/contact</loc>
     </url>
+    <url>
+        <loc>https://privoznik.dev/cs</loc>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://privoznik.dev/cs/about</loc>
+    </url>
+    <url>
+        <loc>https://privoznik.dev/cs/projects</loc>
+    </url>
+    <url>
+        <loc>https://privoznik.dev/cs/cv</loc>
+    </url>
+    <url>
+        <loc>https://privoznik.dev/cs/contact</loc>
+    </url>
 </urlset>
