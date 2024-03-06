@@ -5,6 +5,28 @@ export const siteConfig = {
   description:
     "Martin Přívozník portoflio page. I'm a Full Stack software engineer, Co‑Founder of Dreamind and Web Development Lecturer.",
   siteLocales: ["en", "cs", "chewbacca", "groot"],
+  siteLocalesData: [
+    {
+      name: "en",
+      displayName: "English",
+      flagSrc: "/images/languages/en.png",
+    },
+    {
+      name: "cs",
+      displayName: "Česky",
+      flagSrc: "/images/languages/cs.png",
+    },
+    {
+      name: "chewbacca",
+      displayName: "Chewbacca",
+      flagSrc: "/images/languages/chewbacca.jpg",
+    },
+    {
+      name: "groot",
+      displayName: "Groot",
+      flagSrc: "/images/languages/groot.jpg",
+    },
+  ],
   defaultLocales: "en",
   navItems: [
     {

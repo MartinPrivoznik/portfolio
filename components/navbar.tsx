@@ -21,6 +21,7 @@ import { usePathname } from "next/navigation";
 import { ThemeSwitch } from "./theme-switch";
 import { buildUrl } from "@/helpers/UrlBuilder";
 import { useTranslation } from "@/app/i18n/client";
+import { LanguagesDropdown } from "./shared/LanguagesDropdown";
 
 export const Navbar = (props: { lang: string }) => {
   const { t } = useTranslation(props.lang);
@@ -70,7 +71,7 @@ export const Navbar = (props: { lang: string }) => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
+        <NavbarItem className="hidden sm:flex gap-2" aria-label="LinkedIn">
           <Link isExternal href={siteConfig.links.linkedIn}>
             <LinkedInIcon className="text-default-500" />
           </Link>
@@ -80,15 +81,14 @@ export const Navbar = (props: { lang: string }) => {
           <Link isExternal href={siteConfig.links.github} aria-label="Github">
             <GithubIcon className="text-default-500" />
           </Link>
+          <LanguagesDropdown lang={props.lang} />
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden md:flex"></NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github} aria-label="Github">
-          <GithubIcon className="text-default-500" />
-        </Link>
+        <LanguagesDropdown lang={props.lang} />
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
@@ -110,6 +110,17 @@ export const Navbar = (props: { lang: string }) => {
               </Link>
             </NavbarMenuItem>
           ))}
+        </div>
+        <div className="mx-4 mt-2 flex gap-2">
+          <Link isExternal href={siteConfig.links.linkedIn}>
+            <LinkedInIcon className="text-default-500" />
+          </Link>
+          <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
+            <DiscordIcon className="text-default-500" />
+          </Link>
+          <Link isExternal href={siteConfig.links.github} aria-label="Github">
+            <GithubIcon className="text-default-500" />
+          </Link>
         </div>
       </NavbarMenu>
     </NextUINavbar>
