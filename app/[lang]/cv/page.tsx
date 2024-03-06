@@ -16,7 +16,7 @@ export default function CVPage({
 }) {
   return (
     <>
-      <CvPageHeading />
+      <CvPageHeading lang={params.lang} />
       <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-3 w-full overflow-x-hidden">
         <div className="container flex flex-col items-center justify-center gap-4">
           <div className="flex flex-col lg:flex-row w-full">
@@ -25,7 +25,7 @@ export default function CVPage({
             </HideOnScrollSoft>
             <Divider className="lg:hidden" />
             <HideOnScrollSoft fullWidth>
-              <CvSkills />
+              <CvSkills lang={params.lang} />
             </HideOnScrollSoft>
           </div>
           <Divider />
@@ -39,12 +39,12 @@ export default function CVPage({
             </HideOnScrollSoft>
             <Divider className="lg:hidden" />
             <HideOnScrollSoft fullWidth>
-              <CvCommunication />
+              <CvCommunication lang={params.lang} />
             </HideOnScrollSoft>
           </div>
           <Divider />
           <HideOnScrollSoft>
-            <CvAchievements />
+            <CvAchievements lang={params.lang} />
           </HideOnScrollSoft>
         </div>
       </section>

@@ -20,7 +20,7 @@ export const CvEducation = async (props: { lang: string }) => {
             <div className="w-full">
               <div className="flex flex-col w-full px-5 pb-5">
                 <h2 className={subtitle({ class: "mt-2 mb-0" })}>
-                  {s.name} - {t(s.field)}
+                  {t(s.name)} - {t(s.field)}
                 </h2>
                 <span className="text-small text-default-500">
                   {t(s.period)} - {t(s.status)}

@@ -5,12 +5,16 @@ import { Reveal } from "../animations/Reveal";
 import { RevealSlide } from "../animations/RevealSlide";
 import { subtitle } from "../primitives";
 import { siteConfig } from "@/config/site";
+import { useTranslation } from "@/app/i18n/client";
 
-export const CvSkills = () => {
+export const CvSkills = (props: { lang: string }) => {
+  const { t } = useTranslation(props.lang);
   return (
     <div className="flex flex-col items-center w-full px-5">
       <RevealSlide width="fit-content">
-        <h3 className={subtitle({ class: "mt-2 text-center" })}>Skills</h3>
+        <h3 className={subtitle({ class: "mt-2 text-center" })}>
+          {t("skills")}
+        </h3>
       </RevealSlide>
       <div className="flex flex-col gap-3 w-full max-w-[500px] min-w-[320px] px-5">
         {siteConfig.cv.skills &&

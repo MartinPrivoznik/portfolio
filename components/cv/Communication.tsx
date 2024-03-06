@@ -5,13 +5,15 @@ import { Reveal } from "../animations/Reveal";
 import { RevealSlide } from "../animations/RevealSlide";
 import { subtitle } from "../primitives";
 import { siteConfig } from "@/config/site";
+import { useTranslation } from "@/app/i18n";
 
-export const CvCommunication = () => {
+export const CvCommunication = async (props: { lang: string }) => {
+  const { t } = await useTranslation(props.lang);
   return (
     <div className="flex flex-col items-center w-full px-5">
       <RevealSlide width="fit-content">
         <h3 className={subtitle({ class: "mt-2 text-center" })}>
-          Communication
+          {t("communication")}
         </h3>
       </RevealSlide>
       <div className="flex flex-col gap-3 w-full max-w-[500px] min-w-[320px] px-5">
@@ -20,7 +22,7 @@ export const CvCommunication = () => {
             <Reveal key={i}>
               <Slider
                 color="primary"
-                label={s.name}
+                label={t(s.name)}
                 defaultValue={s.value}
                 getValue={(v) => `${v} %`}
                 className="w-full pointer-events-none"

@@ -11,26 +11,28 @@ import {
   useDisclosure,
 } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
+import { useTranslation } from "@/app/i18n/client";
 
-export const CvPageHeading = () => {
+export const CvPageHeading = (props: { lang: string }) => {
+  const { t } = useTranslation(props.lang);
   const [postHeadingText, setPostHeadingText] = useState<string | undefined>(
     "[.pdf]"
   );
   const [subHeadingText, setSubHeadingText] = useState<string>(
-    "So I don't have to send you an email with that PDF file"
+    t("soIDontHaveToSendPdf")
   );
   const modal = useDisclosure();
 
   const toggleRickRoll = () => {
     modal.onOpen();
-    setSubHeadingText("What did you think? Go ahead and watch this page");
+    setSubHeadingText(t("whatDidYouThinkGoWatchThisPage"));
     setPostHeadingText(undefined);
   };
 
   return (
     <>
       <SubpageHeader
-        heading="CV"
+        heading={t("cv")}
         subheading={subHeadingText}
         imgSrc="/images/cv-hero-min.png"
         imgWidth={430}
@@ -56,7 +58,7 @@ export const CvPageHeading = () => {
               </ModalBody>
               <ModalFooter>
                 <Button color="primary" onPress={onClose}>
-                  Close
+                  {t("close")}
                 </Button>
               </ModalFooter>
             </>

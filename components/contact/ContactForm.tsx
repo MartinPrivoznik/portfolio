@@ -7,7 +7,7 @@ import { sendContactEmail } from "@/app/actions";
 import { ContactFormInputs } from "./Form";
 import { EmailSentView } from "./EmailSentView";
 
-export const ContactForm = () => {
+export const ContactForm = (props: { lang: string }) => {
   const [loading, setLoading] = useState(false);
   const [showEmailSentView, setShowEmailSentView] = useState(false);
   const [errorSendingEmail, setErrorSendingEmail] = useState(false);
@@ -32,12 +32,16 @@ export const ContactForm = () => {
             loading={loading}
             errorSendingEmail={errorSendingEmail}
             handleSubmit={handleSubmit}
+            lang={props.lang}
           />
         </Reveal>
       )}
 
       {showEmailSentView && (
-        <EmailSentView setShowEmailSentView={setShowEmailSentView} />
+        <EmailSentView
+          lang={props.lang}
+          setShowEmailSentView={setShowEmailSentView}
+        />
       )}
     </div>
   );

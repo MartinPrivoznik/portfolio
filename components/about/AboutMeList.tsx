@@ -6,8 +6,10 @@ import { Reveal } from "../animations/Reveal";
 import { RevealSlide } from "../animations/RevealSlide";
 import { subtitle } from "../primitives";
 import { Image } from "@nextui-org/image";
+import { useTranslation } from "@/app/i18n/client";
 
-export const AboutMeList = () => {
+export const AboutMeList = (props: { lang: string }) => {
+  const { t } = useTranslation(props.lang);
   const calculateMyAge = () => {
     var today = new Date();
     var birthDate = new Date(2000, 8, 20);
@@ -35,10 +37,10 @@ export const AboutMeList = () => {
           >
             <div className="w-full flex flex-col justify-center">
               <RevealSlide width="fit-content">
-                <h3 className={subtitle({ class: "mt-2" })}>{p.name}</h3>
+                <h3 className={subtitle({ class: "mt-2" })}>{t(p.name)}</h3>
               </RevealSlide>
               <Reveal>
-                <p className="text-justify">{formatString(p.desc)}</p>
+                <p className="text-justify">{formatString(t(p.desc))}</p>
               </Reveal>
             </div>
             <div

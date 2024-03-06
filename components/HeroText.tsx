@@ -10,7 +10,7 @@ export const HeroText = (props: { lang: string }) => {
   return (
     <div>
       <RevealSlide width="fit-content">
-        <div>
+        <div className="p-3">
           <h2 className={title({ size: "lg" })}>
             {t("helloIm")}&nbsp;
             <span className={title({ color: "primary", size: "lg" })}>
@@ -21,13 +21,15 @@ export const HeroText = (props: { lang: string }) => {
       </RevealSlide>
       <br />
       <RevealSlide width="fit-content">
-        <h3 className={subtitle({ class: "mt-2" })}>
-          {t("heroSubheading1")}{" "}
-          <Link href="https://dreamind.cz/" target="_blank">
-            Dreamind
-          </Link>{" "}
-          {t("heroSubheading2")}
-        </h3>
+        <div className="p-3">
+          <h3 className={subtitle({ class: "mt-2" })}>
+            {t("heroSubheading1")}{" "}
+            <Link href="https://dreamind.cz/" target="_blank">
+              Dreamind
+            </Link>{" "}
+            {t("heroSubheading2")}
+          </h3>
+        </div>
       </RevealSlide>
     </div>
   );

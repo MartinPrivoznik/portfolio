@@ -9,12 +9,14 @@ interface IRunningButtonProps {
   loading: boolean;
   validationSchema: AnyObjectSchema;
   formData: any;
+  text: string;
 }
 
 export const RunningButton = ({
   loading,
   validationSchema,
   formData,
+  text,
 }: IRunningButtonProps) => {
   const [ranLeft, setRanLeft] = useState(false);
 
@@ -41,7 +43,7 @@ export const RunningButton = ({
         disabled={loading}
         onMouseEnter={handleMouseEnter}
       >
-        Send email
+        {text}
         {loading && <Spinner color="default" size="sm" />}
       </Button>
     </>

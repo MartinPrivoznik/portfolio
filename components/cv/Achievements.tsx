@@ -4,13 +4,15 @@ import { subtitle } from "../primitives";
 import { Reveal } from "../animations/Reveal";
 import { Link } from "@nextui-org/link";
 import { GithubIcon } from "../icons";
+import { useTranslation } from "@/app/i18n";
 
-export const CvAchievements = () => {
+export const CvAchievements = async (props: { lang: string }) => {
+  const { t } = await useTranslation(props.lang);
   return (
     <div className="flex flex-col items-center w-full max-w-[1000px]">
       <RevealSlide width="fit-content">
         <h3 className={subtitle({ class: "mt-2 text-center" })}>
-          Achievements
+          {t("achievements")}
         </h3>
       </RevealSlide>
       <div className="px-5 w-full">
@@ -21,14 +23,14 @@ export const CvAchievements = () => {
                 <div className="flex w-full items-center">
                   <div className="flex flex-col">
                     <h2 className={subtitle({ class: "mt-2 mb-0" })}>
-                      {s.name}
+                      {t(s.name)}
                     </h2>
                     <span className="text-small text-default-500">
-                      {s.subdesc}, issued by{" "}
+                      {t(s.subdesc)}, {t("issuedBy")}{" "}
                       <Link href={s.issuerLink} isExternal>
                         {s.issuer}
                       </Link>{" "}
-                      on {s.date}
+                      {t("on")} {t(s.date)}
                     </span>
                   </div>
                   <div className="ml-auto w-[20%] text-end">
@@ -37,7 +39,7 @@ export const CvAchievements = () => {
                     </Link>
                   </div>
                 </div>
-                <p className="pt-2 text-justify">{s.desc}</p>
+                <p className="pt-2 text-justify">{t(s.desc)}</p>
                 <div className="flex w-full justify-center mt-5">
                   <iframe
                     style={{ width: "60%", minWidth: 300, minHeight: 250 }}

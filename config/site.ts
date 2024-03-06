@@ -150,7 +150,7 @@ export const siteConfig = {
   ],
   studies: [
     {
-      name: "SPŠSE a VOŠ Liberec",
+      name: "spsseName",
       period: "sep2016tojun2020",
       status: "spsseStatus",
       field: "spsseField",
@@ -159,7 +159,7 @@ export const siteConfig = {
       urlText: "www.prumyslovkaliberec.cz",
     },
     {
-      name: "FIT CTU in Prague",
+      name: "fitName",
       period: "sep2020toapr2022",
       status: "fitStatus",
       field: "fitField",
@@ -169,7 +169,7 @@ export const siteConfig = {
       urlText: "fit.cvut.cz",
     },
     {
-      name: "Prague University of Economics and Business",
+      name: "fisName",
       period: "sep2023tonow",
       status: "fisStatus",
       field: "fisField",
@@ -180,21 +180,21 @@ export const siteConfig = {
   ],
   projects: [
     {
-      name: "This portfolio",
-      shortDescription: "Custom personal website",
+      name: "thisPortfolioName",
+      shortDescription: "thisPortfolioShortDesc",
       links: [
         {
-          text: "Home",
+          text: "home",
           url: "/",
           private: false,
         },
       ],
-      text: "A simple portfolio page containing information about me, my projects, with the possibility to contact me",
+      text: "thisPortfolioText",
       technologies: ["Next.JS", "TypeScript", "Tailwind", "Framer Motion"],
     },
     {
-      name: "Eshop Cymedica",
-      shortDescription: "Eshop Web application solution",
+      name: "eshopCymedicaName",
+      shortDescription: "eshopCymedicaShortDesc",
       links: [
         {
           text: "demo.cymedica.cz",
@@ -203,7 +203,7 @@ export const siteConfig = {
           internal: null,
         },
       ],
-      text: "An e-shop tailored for a Cymedica client. This is a fully custom solution. Only authorized users can log in to the e-shop, which is managed by the client using its CRM system. The application provides veterinarians with the opportunity to purchase veterinary supplies based on individually negotiated conditions with the client",
+      text: "eshopCymedicaText",
       technologies: [
         "ASP.NET Core",
         "MVC",
@@ -214,8 +214,8 @@ export const siteConfig = {
       ],
     },
     {
-      name: "PetShop Cymedica",
-      shortDescription: "Boxed Eshop Web application solution",
+      name: "petShopCymedicaName",
+      shortDescription: "petShopCymedicaShortDesc",
       links: [
         {
           text: "petshop.cymedica.cz/weilovna",
@@ -228,12 +228,12 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "A network of e-shops providing veterinary supplies for end clients. It is a boxed solution, and it is possible for an authorized user to generate an identical-looking e-shop for a new client directly from the e-shop administration. The solution provides the possibility of editing some elements on individual websites, such as the company logo or name",
+      text: "petShopCymedicaText",
       technologies: ["ASP.NET Core", "MVC", "MSSQL", "Hangfire", "REST API"],
     },
     {
-      name: "Markeeto company database",
-      shortDescription: "Company database filter Web application",
+      name: "markeetoName",
+      shortDescription: "markeetoShortDesc",
       links: [
         {
           text: "markeeto.cz",
@@ -241,13 +241,13 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "Company database with very detailed filtering options. This is an application that allows access to additional functionality based on the amount of the subscription. A third-party database is used to list information about companies, and the application as such handles user management and their unlocked records",
+      text: "markeetoText",
       technologies: ["ASP.NET Core", "REST API", "MSSQL", "Angular"],
     },
     {
-      name: "Backend solutions for real estate agents (with demo frontend applications)",
-      shortDescription: "REST API solution for several real estate agencies",
-      text: "I was involved in the development of REST APIs that was used by real estate agents' front-end applications to facilitate their work. The application helped them generate rent and other contracts in .docx or .pdf format. In addition to generating contracts, she searched for the necessary information from various interfaces, such as the real estate cadastre",
+      name: "praetorName",
+      shortDescription: "praetorShortDesc",
+      text: "praetorText",
       technologies: [
         "ASP.NET Core",
         "REST API",
@@ -258,9 +258,8 @@ export const siteConfig = {
       ],
     },
     {
-      name: "Confin",
-      shortDescription:
-        "Microsites for development projects with fully custom CMS for each microsite",
+      name: "confinName",
+      shortDescription: "confinShortDesc",
       links: [
         {
           text: "www.pozemky-mirotice.cz/",
@@ -273,19 +272,18 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "Simple sites for development projects. The applications include a unified CMS in which it is possible for project directors to manage information on land areas and prices",
+      text: "confinText",
       technologies: ["Next.JS", "REST API", "Bootstrap"],
     },
     {
-      name: "DEGA Config",
-      shortDescription: "Desktop interface for configuring gas detectors",
-      text: "A desktop application enabling the configuration and calibration of DEGA devices that communicate via a serial interface with a superior system. The resulting configuration and calibration settings can be printed to the appropriate logs. The device can be connected to a computer via the RS232 communication interface and further configured using this application",
+      name: "degaName",
+      shortDescription: "degaShortDesc",
+      text: "degaText",
       technologies: [".NET Framework", "WPF", "SQLite", "RS232 interface"],
     },
     {
-      name: "CITR",
-      shortDescription:
-        "Desktop application for processing corporate income tax returns",
+      name: "citrName",
+      shortDescription: "citrShortDesc",
       links: [
         {
           text: "www.whitesoft.cz/reseni/male-a-stredni-firmy/citr",
@@ -293,13 +291,12 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "Application for processing corporate income tax returns. It enables its quick, efficient and professional creation. Using the application, it is possible to manage tax returns for groups of people as well. Accounting data can be manipulated here using an interactive spreadsheet interface",
+      text: "citrText",
       technologies: [".NET Framework", "WinForms", "MSSQL"],
     },
     {
-      name: "FreshFlow Mobile",
-      shortDescription:
-        "Multiplatform calendar mobile application for managing teams",
+      name: "freshFlowName",
+      shortDescription: "freshFlowShortDesc",
       links: [
         {
           text: "freshflow.cz",
@@ -307,12 +304,12 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "A calendar application for organizing people in a company. It is possible to create events, contacts and tasks that need to be worked on. It is possible to invite other people from the organization to these events and share the calendar with them. It is also possible to make phone calls and send push notifications in the event of an upcoming event via the application",
+      text: "freshFlowText",
       technologies: ["Xamarin", "SQLite", "REST API", "Firebase"],
     },
     {
-      name: "TuxMan FPGA",
-      shortDescription: "FPGA solution for an arcade game",
+      name: "tuxManProjectsName",
+      shortDescription: "tuxManProjectsShortDesc",
       links: [
         {
           text: "GitHub",
@@ -320,7 +317,7 @@ export const siteConfig = {
           private: false,
         },
       ],
-      text: "I designed an arcade game at the RTL level and implemented this game using a programmable gate array (FPGA). It was a graduation thesis that I submitted to the national SOČ competition. The work won third place and was nominated for an international competition held in China",
+      text: "tuxManProjectsText",
       technologies: ["VHDL", "Basys2", "VGA", "PS2"],
     },
   ],
@@ -369,22 +366,22 @@ export const siteConfig = {
     ],
     communicationSkills: [
       {
-        name: "Czech",
+        name: "czechLanguage",
         value: 100,
       },
       {
-        name: "English (C1)",
+        name: "englishC1",
         value: 83,
       },
     ],
     achievements: [
       {
-        name: "TuxMan, the arcade game run by FPGA",
-        subdesc: "3rd place in the SOČ competition",
+        name: "tuxManName",
+        subdesc: "tuxManSubDesc",
         issuer: "MŠMT ČR",
         issuerLink: "https://www.msmt.cz/",
-        date: "Jun 2020",
-        desc: "I designed an arcade game at the RTL level and implemented this game using a programmable gate array (FPGA). It was a graduation thesis that I submitted to the national SOČ competition. The work won third place and was nominated for an international competition held in China. The project was led by a doctoral student from the FIT of CTU, engineer Petr Socha.",
+        date: "tuxManDate",
+        desc: "tuxManDesc",
         videoEmbedLink: "https://www.youtube.com/embed/RuPYUzX7cac",
         gitLink: "https://github.com/MartinPrivoznik/TuxMan-FPGA",
       },
@@ -392,20 +389,20 @@ export const siteConfig = {
   },
   aboutSections: [
     {
-      name: "Basic information",
-      desc: "My name is Martin Přívozník. I am a {age} year old student with a passion for technology. I am currently based in Prague, where I work in software development and study at the University of Economics. My field of study is Applied Informatics, which I chose to gain knowledge in IT business",
+      name: "basicInformation",
+      desc: "basicInformationDesc",
       imgPath: "/images/about/1-min.jpg",
       imgWidth: 400,
     },
     {
-      name: "Hobbies",
-      desc: "You could say I'm a pub crawler. During the days I devote myself to work on my own projects, school and sometimes computer games. In the evenings, you can most often find me in pubs or dance clubs. During the summer I like to therapeutically shut myself away in the dark for a week to get a break from everything, or go on a water ride. When it comes down to it, I sometimes lighten up my day by trying to hack various systems",
+      name: "hobbies",
+      desc: "hobbiesDesc",
       imgPath: "/images/about/3-min.jpg",
       imgWidth: 250,
     },
     {
-      name: "Personal goals",
-      desc: "On my way, I would like to become a solution architect and an ethical hacker. I enjoy having conversations with people who have experience in development and ethical hacking and absorbing their knowledge. But the goal remains to have a job that will fulfill me one day, and it is clear to me that this path can change several times in my life :)",
+      name: "personalGoals",
+      desc: "personalGoalsDesc",
       imgPath: "/images/about/2-min.jpg",
       imgWidth: 200,
     },

@@ -21,7 +21,7 @@ export default async function AboutPage({
       />
       <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-3 w-full overflow-x-hidden">
         <div className="container flex flex-col items-center justify-center gap-4"></div>
-        <AboutMeList />
+        <AboutMeList lang={params.lang} />
       </section>
     </>
   );

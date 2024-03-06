@@ -7,18 +7,23 @@ import { Button } from "@nextui-org/button";
 import { Spinner } from "@nextui-org/spinner";
 import { ContactFormType } from "@/types";
 import RunningButton from "./RunningButton";
+import { useTranslation } from "@/app/i18n/client";
 
 interface IContactFormInputProps {
   loading: boolean;
   handleSubmit: (values: ContactFormType) => {};
   errorSendingEmail: boolean;
+  lang: string;
 }
 
 export const ContactFormInputs = ({
   loading,
   handleSubmit,
   errorSendingEmail,
+  lang,
 }: IContactFormInputProps) => {
+  const { t } = useTranslation(lang);
+
   const contactFormInitialProps = {
     fullName: "",
     email: "",
@@ -27,15 +32,15 @@ export const ContactFormInputs = ({
 
   const contactFormValidationSchema = object().shape({
     fullName: string()
-      .required("Field required")
-      .max(100, "Enter a maximum of 80 characters"),
+      .required(t("fieldRequired"))
+      .max(100, t("enterMaximumOf80Chars")),
     email: string()
-      .email("Enter a valid email address")
-      .required("Field required")
-      .max(100, "Enter a maximum of 80 characters"),
+      .email(t("enterValidEmailAddress"))
+      .required(t("fieldRequired"))
+      .max(100, t("enterMaximumOf80Chars")),
     text: string()
-      .required("Field required")
-      .max(1000, "Enter a maximum of 1000 characters"),
+      .required(t("fieldRequired"))
+      .max(1000, t("enterMaximumOf1000Chars")),
   });
 
   return (
@@ -53,7 +58,7 @@ export const ContactFormInputs = ({
               <Input
                 type="text"
                 variant="bordered"
-                label="Full name"
+                label={t("fullName")}
                 name="fullName"
                 value={props.values.fullName}
                 onChange={props.handleChange}
@@ -73,7 +78,7 @@ export const ContactFormInputs = ({
               <Input
                 type="email"
                 variant="bordered"
-                label="Your email"
+                label={t("yourEmail")}
                 name="email"
                 value={props.values.email}
                 onChange={props.handleChange}
@@ -94,7 +99,7 @@ export const ContactFormInputs = ({
             <Textarea
               className="mt-3"
               variant="bordered"
-              label="Tell me about your project"
+              label={t("tellMeAboutYourProject")}
               name="text"
               value={props.values.text}
               onChange={props.handleChange}
@@ -111,9 +116,7 @@ export const ContactFormInputs = ({
               <div className="w-full md:w-2/3">
                 {errorSendingEmail && (
                   <p className="text-danger">
-                    An error occured while trying co send an email. Try
-                    contacting me directly on my email address:
-                    marprivoznik@gmail.com
+                    {t("contactFormSubmissionError")}
                   </p>
                 )}
               </div>
@@ -122,6 +125,7 @@ export const ContactFormInputs = ({
                   validationSchema={contactFormValidationSchema}
                   formData={props.values}
                   loading={loading}
+                  text={t("sendEmail")}
                 />
               </div>
             </div>
