@@ -26,10 +26,6 @@ export const metadata: Metadata = {
     "Martin Přívozník, Portfolio, Developer, Software engineer, Personal web",
 };
 
-export async function generateStaticParams() {
-  return siteConfig.siteLocales.map((lng) => ({ lng }));
-}
-
 export default function RootLayout({
   children,
   params,
