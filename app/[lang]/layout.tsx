@@ -19,8 +19,11 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  keywords:
+    "Martin Přívozník, Portfolio, Developer, Software engineer, Personal web",
 };
 
 export async function generateStaticParams() {
