@@ -4,15 +4,16 @@ import Image from "next/image";
 import { HeroText } from "./HeroText";
 import { motion, useAnimation } from "framer-motion";
 import { HideOnScroll } from "./animations/HideOnScroll";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import heroImg from "../public/images/hero-min.png";
 
 export const Hero = (props: { lang: string }) => {
   const imgRef = useRef(null);
   const mainControls = useAnimation();
 
-  const animateImage = () => {
+  useEffect(() => {
     mainControls.start("visible");
-  };
+  }, [mainControls]);
 
   return (
     <HideOnScroll>
@@ -34,12 +35,11 @@ export const Hero = (props: { lang: string }) => {
           className="flex absolute bottom-0 w-full h-full lg:relative -right-[55px] xs:right-0 md:w-3/7 lg:w-2/6 justify-end"
         >
           <Image
-            src={"/images/hero-min.png"}
+            src={heroImg}
             alt="Martin Přívozník"
             width={1060}
             height={918}
             priority={true}
-            onLoad={animateImage}
             className="absolute bottom-0 lg:relative hero-image"
           />
         </motion.div>

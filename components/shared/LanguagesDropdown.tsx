@@ -1,6 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
+import { Button } from "@nextui-org/button";
 import {
   Dropdown,
   DropdownItem,
@@ -42,7 +43,6 @@ export const LanguagesDropdown = (props: { lang: string }) => {
             alt={activeLang.name}
             src={activeLang.flagSrc}
             className="cursor-pointer min-w-[25px]"
-            tabIndex={2}
           />
         </div>
       </DropdownTrigger>
@@ -51,10 +51,10 @@ export const LanguagesDropdown = (props: { lang: string }) => {
         {nonActiveLangs &&
           nonActiveLangs.map((nal, i) => (
             <DropdownItem
-              key={i}
               href={
                 nal.name == siteConfig.defaultLocales ? "/" : `/${nal.name}`
               }
+              key={i}
               startContent={
                 <Image
                   width={25}
