@@ -1,30 +1,16 @@
-"use client";
-
 import { siteConfig } from "@/config/site";
 import { Divider } from "@nextui-org/divider";
 import { Reveal } from "../animations/Reveal";
 import { RevealSlide } from "../animations/RevealSlide";
 import { subtitle } from "../primitives";
 import { Image } from "@nextui-org/image";
-import { useTranslation } from "@/app/i18n/client";
+import { useTranslation } from "@/app/i18n";
+import { AboutMeText } from "./AboutMeText";
+import { calculateMyAge } from "@/helpers/Calculator";
 
-export const AboutMeList = (props: { lang: string }) => {
-  const { t } = useTranslation(props.lang);
-  const calculateMyAge = () => {
-    var today = new Date();
-    var birthDate = new Date(2000, 8, 20);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
-    }
-    return age.toString();
-  };
-
-  const formatString = (val: string) => {
-    const res = val.replace("{age}", calculateMyAge());
-    return res;
-  };
+export const AboutMeList = async (props: { lang: string }) => {
+  const { t } = await useTranslation(props.lang);
+  const age = calculateMyAge();
 
   return (
     <div className="flex flex-col items-center w-full max-w-[1200px] px-10">
@@ -39,9 +25,11 @@ export const AboutMeList = (props: { lang: string }) => {
               <RevealSlide width="fit-content">
                 <h3 className={subtitle({ class: "mt-2" })}>{t(p.name)}</h3>
               </RevealSlide>
-              <Reveal>
-                <p className="text-justify">{formatString(t(p.desc))}</p>
-              </Reveal>
+              <AboutMeText
+                lang={props.lang}
+                desc={p.desc}
+                age={age}
+              ></AboutMeText>
             </div>
             <div
               className={`w-full mt-5 md:mt-0 flex justify-center ${
