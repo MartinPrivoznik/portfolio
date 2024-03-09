@@ -15,7 +15,7 @@ export const AboutMeList = async (props: { lang: string }) => {
   return (
     <div className="flex flex-col items-center w-full max-w-[1200px] px-10">
       {siteConfig.aboutSections.map((p, i) => (
-        <div key={i}>
+        <div className="min-h-[280px] w-full" key={i}>
           <div
             className={`flex flex-col w-full mb-4 mt-3 md:flex-row${
               i % 2 == 1 ? " md:flex-row-reverse" : ""

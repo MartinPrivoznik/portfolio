@@ -34,7 +34,7 @@ export const ExperienceCards = async (props: {
                 />
                 <div className="flex flex-col">
                   <p className="text-md">
-                    {t(e.role)} at {e.name}
+                    {t(e.role)} {t("at")} {e.name}
                   </p>
                   <p className="text-small text-default-500">{e.urlText}</p>
                 </div>
