@@ -1,7 +1,6 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
-import { Button } from "@nextui-org/button";
 import {
   Dropdown,
   DropdownItem,
@@ -9,64 +8,63 @@ import {
   DropdownTrigger,
 } from "@nextui-org/dropdown";
 import { Image } from "@nextui-org/image";
-import { useEffect, useState } from "react";
+import { Link } from "@nextui-org/link";
+import { useRouter } from "next/navigation";
 
 export const LanguagesDropdown = (props: { lang: string }) => {
-  const [activeLang, setActiveLang] = useState<{
-    name: string;
-    flagSrc: string;
-    displayName: string;
-  }>();
-  const [nonActiveLangs, setNonActiveLangs] =
-    useState<Array<{ name: string; flagSrc: string; displayName: string }>>();
+  const router = useRouter();
 
-  useEffect(() => {
-    const activeLanguage =
-      siteConfig.siteLocalesData.find((sld) => sld.name == props.lang) ??
-      siteConfig.siteLocalesData[0];
-    const nonActiveLangs = siteConfig.siteLocalesData.filter(
-      (sld) => sld.name != props.lang
-    );
+  const activeLang =
+    siteConfig.siteLocalesData.find((sld) => sld.name == props.lang) ??
+    siteConfig.siteLocalesData[0];
+  const nonActiveLangs = siteConfig.siteLocalesData.filter(
+    (sld) => sld.name != props.lang
+  );
 
-    setActiveLang(activeLanguage);
-    setNonActiveLangs(nonActiveLangs);
-  }, [props.lang]);
+  const nonActiveLangOptions = nonActiveLangs.map((nal, i) => {
+    return {
+      ...nal,
+      key: i,
+    };
+  });
 
-  if (!activeLang) return <></>;
+  const handleRedirectToLang = (lang: string) => {
+    router.push(lang == siteConfig.defaultLocales ? "/" : `/${lang}`);
+  };
 
   return (
     <Dropdown>
       <DropdownTrigger>
-        <div className="flex items-center" tabIndex={1}>
+        <Link className="flex items-center" href="#">
           <Image
             width={25}
             alt={activeLang.name}
             src={activeLang.flagSrc}
             className="cursor-pointer min-w-[25px]"
           />
-        </div>
+        </Link>
       </DropdownTrigger>
-      <DropdownMenu variant="faded" aria-label="Languages">
-        {/* @ts-ignore */}
-        {nonActiveLangs &&
-          nonActiveLangs.map((nal, i) => (
-            <DropdownItem
-              href={
-                nal.name == siteConfig.defaultLocales ? "/" : `/${nal.name}`
-              }
-              key={i}
-              startContent={
-                <Image
-                  width={25}
-                  alt={nal.name}
-                  src={nal.flagSrc}
-                  className="cursor-pointer min-w-[25px]"
-                />
-              }
-            >
-              {nal.displayName}
-            </DropdownItem>
-          ))}
+      <DropdownMenu
+        variant="faded"
+        aria-label="Languages"
+        items={nonActiveLangOptions}
+      >
+        {(lang) => (
+          <DropdownItem
+            onClick={() => handleRedirectToLang(lang.name)}
+            key={lang.key}
+            startContent={
+              <Image
+                width={25}
+                alt={lang.name}
+                src={lang.flagSrc}
+                className="cursor-pointer min-w-[25px]"
+              />
+            }
+          >
+            {lang.displayName}
+          </DropdownItem>
+        )}
       </DropdownMenu>
     </Dropdown>
   );
