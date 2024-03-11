@@ -17,10 +17,24 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  authors: { url: "https://privoznik.dev/", name: "Martin Přívozník" },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: ["/logo192.png"],
+  },
+  openGraph: {
+    type: "website",
+    url: "https://privoznik.dev/",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [{ url: "/logo192.png", alt: siteConfig.name }],
   },
   keywords:
     "Martin Přívozník, Portfolio, Developer, Software engineer, Personal web",
