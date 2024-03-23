@@ -82,14 +82,14 @@ export const Navbar = (props: { lang: string }) => {
             <GithubIcon className="text-default-500" />
           </Link>
           <LanguagesDropdown lang={props.lang} />
-          <ThemeSwitch />
+          <ThemeSwitch lang={props.lang} />
         </NavbarItem>
         <NavbarItem className="hidden md:flex"></NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
         <LanguagesDropdown lang={props.lang} />
-        <ThemeSwitch />
+        <ThemeSwitch lang={props.lang} />
         <NavbarMenuToggle />
       </NavbarContent>
 

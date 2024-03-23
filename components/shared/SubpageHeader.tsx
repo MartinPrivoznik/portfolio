@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useRef } from "react";
-import theme from "tailwindcss/defaultTheme";
 import { HideOnScroll } from "../animations/HideOnScroll";
 import { subtitle } from "../primitives";
 import { RevealSlide } from "../animations/RevealSlide";
