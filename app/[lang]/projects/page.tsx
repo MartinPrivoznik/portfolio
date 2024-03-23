@@ -21,7 +21,7 @@ export default function ProjectsPage({
         subheading={`${t("showCaseOfSomeOfMy")} ${
           uselessProjects ? `${t("useless4pad")} ` : ""
         }${t("work")}`}
-        imgSrc="/images/programmingHead-min.jpg"
+        imgSrc="/images/programmingHead-min.webp"
         imgWidth={500}
         imgHeight={300}
       />

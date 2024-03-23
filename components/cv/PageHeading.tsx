@@ -34,7 +34,7 @@ export const CvPageHeading = (props: { lang: string }) => {
       <SubpageHeader
         heading={t("cv")}
         subheading={subHeadingText}
-        imgSrc="/images/cv-hero-min.png"
+        imgSrc="/images/cv-hero-min.webp"
         imgWidth={430}
         imgHeight={300}
         pngImg

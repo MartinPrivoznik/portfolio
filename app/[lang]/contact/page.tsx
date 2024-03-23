@@ -14,7 +14,7 @@ export default async function ContactPage({
       <SubpageHeader
         heading={t("contact")}
         subheading={t("contactSubheading")}
-        imgSrc="/images/contact-page-hero-min.jpg"
+        imgSrc="/images/contact-page-hero-min.webp"
         imgWidth={430}
         imgHeight={300}
       />

@@ -5,7 +5,7 @@ import { HeroText } from "./HeroText";
 import { motion, useAnimation } from "framer-motion";
 import { HideOnScroll } from "./animations/HideOnScroll";
 import { useEffect, useRef } from "react";
-import heroImg from "../public/images/hero-min.png";
+import heroImg from "../public/images/hero-min.webp";
 
 export const Hero = (props: { lang: string }) => {
   const imgRef = useRef(null);

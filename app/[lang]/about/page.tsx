@@ -14,7 +14,7 @@ export default async function AboutPage({
       <SubpageHeader
         heading={t("aboutMe")}
         subheading={t("aboutMeSubheading")}
-        imgSrc="/images/about-hero-min.png"
+        imgSrc="/images/about-hero-min.webp"
         imgWidth={420}
         imgHeight={400}
         pngImg

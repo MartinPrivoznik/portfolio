@@ -9,22 +9,22 @@ export const siteConfig = {
     {
       name: "en",
       displayName: "English",
-      flagSrc: "/images/languages/en.png",
+      flagSrc: "/images/languages/en.webp",
     },
     {
       name: "cs",
       displayName: "Česky",
-      flagSrc: "/images/languages/cs.png",
+      flagSrc: "/images/languages/cs.webp",
     },
     {
       name: "chewbacca",
       displayName: "Chewbacca",
-      flagSrc: "/images/languages/chewbacca.jpg",
+      flagSrc: "/images/languages/chewbacca.webp",
     },
     {
       name: "groot",
       displayName: "Groot",
-      flagSrc: "/images/languages/groot.jpg",
+      flagSrc: "/images/languages/groot.webp",
     },
   ],
   defaultLocales: "en",
@@ -106,7 +106,7 @@ export const siteConfig = {
       urlText: "dreamind.cz",
       url: "https://dreamind.cz/",
       description: "dreamindDesc",
-      logoUrl: "/images/dreamind-logo.png",
+      logoUrl: "/images/dreamind-logo.webp",
       skills: [
         { text: "C#", importance: "primary" },
         { text: "ASP.NET", importance: "primary" },
@@ -195,7 +195,7 @@ export const siteConfig = {
       period: "sep2023tonow",
       status: "fisStatus",
       field: "fisField",
-      logoUrl: "/images/vse.png",
+      logoUrl: "/images/vse.webp",
       url: "https://fis.vse.cz/",
       urlText: "fis.vse.cz",
     },
@@ -346,7 +346,7 @@ export const siteConfig = {
   uselessProjects: [
     {
       url: "/projects/middleFinger",
-      imgPath: "/images/uselessProjects/middleFinger/thumbnail.jpg",
+      imgPath: "/images/uselessProjects/middleFinger/thumbnail.webp",
       isExternal: false,
     },
     {
@@ -413,19 +413,19 @@ export const siteConfig = {
     {
       name: "basicInformation",
       desc: "basicInformationDesc",
-      imgPath: "/images/about/1-min.jpg",
+      imgPath: "/images/about/1-min.webp",
       imgWidth: 400,
     },
     {
       name: "hobbies",
       desc: "hobbiesDesc",
-      imgPath: "/images/about/3-min.jpg",
+      imgPath: "/images/about/3-min.webp",
       imgWidth: 250,
     },
     {
       name: "personalGoals",
       desc: "personalGoalsDesc",
-      imgPath: "/images/about/2-min.jpg",
+      imgPath: "/images/about/2-min.webp",
       imgWidth: 200,
     },
   ],
