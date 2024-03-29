@@ -358,7 +358,7 @@ export const siteConfig = {
   cv: {
     skills: [
       {
-        name: ".NET",
+        name: ".NET (excluding Blazor)",
         value: 95,
       },
       {
