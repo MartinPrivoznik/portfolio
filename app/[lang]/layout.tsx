@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   },
   keywords:
     "Martin Přívozník, Portfolio, Developer, Software engineer, Personal web",
+  alternates: {
+    canonical: "https://privoznik.dev/",
+  },
 };
 
 export async function generateStaticParams() {
