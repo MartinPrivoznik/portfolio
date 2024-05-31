@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-  return siteConfig.siteLocales.map((lng) => ({ lng }));
+  return siteConfig.siteLocales.map((lang) => ({ lang }));
 }
 
 export default function RootLayout({
