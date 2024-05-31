@@ -350,7 +350,7 @@ export const siteConfig = {
       isExternal: false,
     },
     {
-      url: "https://420-countdown-martinprivoznik.vercel.app/",
+      url: "https://420-countdown.privoznik.dev/",
       imgPath: "/images/uselessProjects/420-countdown/420-mascot.webp",
       isExternal: true,
     },
