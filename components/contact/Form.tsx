@@ -2,12 +2,10 @@
 
 import { Input, Textarea } from "@nextui-org/input";
 import { Form, Formik } from "formik";
-import { string, object } from "yup";
-import { Button } from "@nextui-org/button";
-import { Spinner } from "@nextui-org/spinner";
 import { ContactFormType } from "@/types";
 import RunningButton from "./RunningButton";
 import { useTranslation } from "@/app/i18n/client";
+import { contactFormValidationSchema } from "@/validators/contactFormValidationSchema";
 
 interface IContactFormInputProps {
   loading: boolean;
@@ -30,23 +28,10 @@ export const ContactFormInputs = ({
     text: "",
   } as ContactFormType;
 
-  const contactFormValidationSchema = object().shape({
-    fullName: string()
-      .required(t("fieldRequired"))
-      .max(100, t("enterMaximumOf80Chars")),
-    email: string()
-      .email(t("enterValidEmailAddress"))
-      .required(t("fieldRequired"))
-      .max(100, t("enterMaximumOf80Chars")),
-    text: string()
-      .required(t("fieldRequired"))
-      .max(1000, t("enterMaximumOf1000Chars")),
-  });
-
   return (
     <Formik
       initialValues={contactFormInitialProps}
-      validationSchema={contactFormValidationSchema}
+      validationSchema={contactFormValidationSchema(t)}
       onSubmit={(values, actions) => {
         handleSubmit(values);
       }}
@@ -122,7 +107,7 @@ export const ContactFormInputs = ({
               </div>
               <div className="w-full md:w-1/3 flex items-center justify-end">
                 <RunningButton
-                  validationSchema={contactFormValidationSchema}
+                  validationSchema={contactFormValidationSchema(t)}
                   formData={props.values}
                   loading={loading}
                   text={t("sendEmail")}
