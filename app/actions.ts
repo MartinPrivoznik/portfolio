@@ -17,6 +17,8 @@ export async function sendContactEmail(
 
   if (!isValid) return false;
 
+  console.log("Email request received: ", formData);
+
   const smtpConfig: SMTPTransport.Options = {
     host: process.env.SMTP_HOST,
     port: Number(process.env.SMTP_PORT),
@@ -41,9 +43,13 @@ export async function sendContactEmail(
 
   try {
     const res = await transport.sendMail(message);
-    if (res.accepted) return true;
-  } catch {
-    return false;
+    if (res.accepted) {
+      transport.close();
+      return true;
+    }
+  } catch (error) {
+    console.log(error);
+    transport.close();
   }
   return false;
 }
