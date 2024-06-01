@@ -219,8 +219,8 @@ export const siteConfig = {
       shortDescription: "eshopCymedicaShortDesc",
       links: [
         {
-          text: "demo.cymedica.cz",
-          url: "https://demo.cymedica.cz",
+          text: "eshop.cymedica.cz",
+          url: "https://eshop.cymedica.cz",
           private: true,
           internal: null,
         },
