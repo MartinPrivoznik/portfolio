@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
 import { dir } from "i18next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: {
@@ -73,6 +74,7 @@ export default function RootLayout({
         </Providers>
       </body>
       <GoogleAnalytics gaId="G-K7MDGX1K5T" />
+      <SpeedInsights />
     </html>
   );
 }
