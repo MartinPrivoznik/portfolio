@@ -28,6 +28,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next|public|images|favicon.ico|sitemap.xml|robots.txt|apple-touch-icon.png|logo192.png|neotravuj.mp3).*)",
+    "/((?!_next|public|images|favicon.ico|sitemap.xml|robots.txt|apple-touch-icon.png|logo192.png).*)",
   ],
 };

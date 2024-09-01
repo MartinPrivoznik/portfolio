@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 export const Reveal = (props: {
   children: React.ReactNode;
   fullWidth?: boolean;
+  className?: string;
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -22,7 +23,10 @@ export const Reveal = (props: {
     <div
       ref={ref}
       style={{ position: "relative", overflow: "hidden" }}
-      className={props.fullWidth ? "w-full" : ""}
+      className={
+        (props.fullWidth ? "w-full" : "") +
+        (props.className ? ` ${props.className}` : "")
+      }
     >
       <motion.div
         variants={{
