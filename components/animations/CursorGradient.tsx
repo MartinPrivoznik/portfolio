@@ -7,7 +7,6 @@ export const CursorGradient = () => {
   const [x, setX] = useState<number>();
   const [y, setY] = useState<number>();
   const [lastMouseYOffset, _setLastMouseYOffset] = useState<number>();
-  const { theme } = useTheme();
 
   const lastMouseYOffsetRef = useRef(lastMouseYOffset);
   const setLastMouseYOffset = (n: number) => {

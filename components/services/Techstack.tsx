@@ -1,9 +1,9 @@
-import { useTranslation } from "@/app/i18n";
 import { RevealSlide } from "../animations/RevealSlide";
 import { subtitle } from "../primitives";
 import { Reveal } from "../animations/Reveal";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
+import { useTranslation } from "@/app/i18n";
 
 export const Techstack = async (props: { lang: string }) => {
   const { t } = await useTranslation(props.lang);
@@ -30,10 +30,12 @@ export const Techstack = async (props: { lang: string }) => {
           </Reveal>
         ))}
         <Reveal className="col-span-6">
-          <div
-            className="text-justify"
-            dangerouslySetInnerHTML={{ __html: t("techstackDescription") }}
-          ></div>
+          <div className="text-justify">
+            {t("techstackDescription")}{" "}
+            <span className="pointer-events-none text-bgColor">
+              Can also spank your mom
+            </span>
+          </div>
         </Reveal>
       </div>
     </div>
