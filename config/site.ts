@@ -378,6 +378,12 @@ export const siteConfig = {
       imgPath: "/images/uselessProjects/420-countdown/420-mascot.webp",
       isExternal: true,
     },
+    {
+      url: "https://vse-tester.privoznik.dev/",
+      imgPath:
+        "https://pr.vse.cz/wp-content/uploads/page/58/VSE_logo_CZ_circle_black.jpg",
+      isExternal: true,
+    },
   ],
   cv: {
     skills: [
