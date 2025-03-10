@@ -1,9 +1,11 @@
 export type SiteConfig = typeof siteConfig;
 
+/**
+ * Mostly translation keys for strings
+ */
 export const siteConfig = {
-  name: "Martin Přívozník",
-  description:
-    "Martin Přívozník portoflio page. I'm a Full Stack software engineer, Co‑Founder of Dreamind and Web Development Lecturer.",
+  name: "MartinPrivoznik",
+  description: "siteDescription",
   siteLocales: ["en", "cs", "chewbacca", "groot"],
   siteLocalesData: [
     {
@@ -71,10 +73,10 @@ export const siteConfig = {
       label: "cv",
       href: "/cv",
     },
-    {
-      label: "services",
-      href: "/services",
-    },
+    // {
+    //   label: "services",
+    //   href: "/services",
+    // },
     {
       label: "contact",
       href: "/contact",

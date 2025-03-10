@@ -6,7 +6,8 @@ Allow: *.png
 Allow: sitemap.xml
 
 User-agent: *
-Disallow:
+Disallow: /groot
+Disallow: /chewbacca
 Crawl-Delay: 5
 
 Sitemap: https://privoznik.dev/sitemap.xml

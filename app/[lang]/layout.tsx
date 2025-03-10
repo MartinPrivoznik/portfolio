@@ -10,41 +10,49 @@ import { Footer } from "@/components/Footer";
 import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
 import { dir } from "i18next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  authors: { url: "https://privoznik.dev/", name: "Martin Přívozník" },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: ["/logo192.png"],
-  },
-  openGraph: {
-    type: "website",
-    url: "https://privoznik.dev/",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [{ url: "/logo192.png", alt: siteConfig.name }],
-  },
-  keywords:
-    "Martin Přívozník, Portfolio, Developer, Software engineer, Personal web",
-  alternates: {
-    canonical: "https://privoznik.dev/",
-  },
-};
+import { useTranslation } from "../i18n";
 
 export async function generateStaticParams() {
   return siteConfig.siteLocales.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  children: React.ReactNode;
+  params: IInternationalizedPageParams;
+}): Promise<Metadata> {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = await useTranslation(params.lang);
+
+  return {
+    title: {
+      default: t(siteConfig.name),
+      template: `%s - ${t(siteConfig.name)}`,
+    },
+    description: t(siteConfig.description),
+    authors: { url: "https://privoznik.dev/", name: "Martin Přívozník" },
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t(siteConfig.name),
+      description: t(siteConfig.description),
+      images: ["/logo192.png"],
+    },
+    openGraph: {
+      type: "website",
+      url: "https://privoznik.dev/",
+      title: t(siteConfig.name),
+      description: t(siteConfig.description),
+      images: [{ url: "/logo192.png", alt: t(siteConfig.name) }],
+    },
+    keywords:
+      "Martin Přívozník, Portfolio, Developer, Software engineer, Personal web",
+  };
 }
 
 export default function RootLayout({
