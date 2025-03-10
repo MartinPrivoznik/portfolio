@@ -19,7 +19,6 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  children: React.ReactNode;
   params: IInternationalizedPageParams;
 }): Promise<Metadata> {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -50,8 +49,7 @@ export async function generateMetadata({
       description: t(siteConfig.description),
       images: [{ url: "/logo192.png", alt: t(siteConfig.name) }],
     },
-    keywords:
-      "Martin Přívozník, Portfolio, Developer, Software engineer, Personal web",
+    keywords: t(siteConfig.keywords),
   };
 }
 
