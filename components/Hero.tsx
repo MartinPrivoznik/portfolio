@@ -37,10 +37,11 @@ export const Hero = (props: { lang: string }) => {
           <Image
             src={heroImg}
             alt="Martin Přívozník"
-            width={1060}
-            height={918}
+            width={800}
+            height={600}
             priority={true}
             className="absolute bottom-0 lg:relative hero-image"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </motion.div>
         <div className="hidden lg:block w-1/6"></div>
