@@ -63,13 +63,13 @@ export const SubpageHeader = (props: {
               </h2>
             </RevealSlide>
             <RevealSlide width="fit-content">
-              <h3
+              <span
                 className={subtitle({
                   class: "mt-2" + (props.pngImg ? "" : " text-center"),
                 })}
               >
                 {props.subheading}
-              </h3>
+              </span>
             </RevealSlide>
           </div>
           <div className="w-0 sm:w-1/5"></div>

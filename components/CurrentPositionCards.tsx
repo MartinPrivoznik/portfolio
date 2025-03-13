@@ -33,9 +33,9 @@ export const CurrentPositionCards = async (props: {
                   width={40}
                 />
                 <div className="flex flex-col">
-                  <p className="text-md">
+                  <h4 className="text-md">
                     {t(e.role)} {t("at")} {e.name}
-                  </p>
+                  </h4>
                   <p className="text-small text-default-500">{e.urlText}</p>
                 </div>
               </CardHeader>

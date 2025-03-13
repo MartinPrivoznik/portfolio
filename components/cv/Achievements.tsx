@@ -22,9 +22,9 @@ export const CvAchievements = async (props: { lang: string }) => {
               <div className="flex flex-col w-full px-5 pb-5">
                 <div className="flex w-full items-center">
                   <div className="flex flex-col">
-                    <h2 className={subtitle({ class: "mt-2 mb-0" })}>
+                    <h4 className={subtitle({ class: "mt-2 mb-0" })}>
                       {t(s.name)}
-                    </h2>
+                    </h4>
                     <span className="text-small text-default-500">
                       {t(s.subdesc)}, {t("issuedBy")}{" "}
                       <Link href={s.issuerLink} isExternal>

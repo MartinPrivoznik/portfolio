@@ -16,7 +16,7 @@ export const RealProjects = (props: { lang: string }) => {
         <Reveal key={i} fullWidth>
           <div className="w-full px-6 md:px-24 lg:px-32 xl:px-64 mt-5">
             <div className="flex flex-col w-full px-5 pb-5">
-              <h2 className={subtitle({ class: "mt-2 mb-0" })}>{t(p.name)}</h2>
+              <h3 className={subtitle({ class: "mt-2 mb-0" })}>{t(p.name)}</h3>
               <span className="text-small text-default-500">
                 {t(p.shortDescription)}
               </span>

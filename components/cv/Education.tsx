@@ -19,9 +19,9 @@ export const CvEducation = async (props: { lang: string }) => {
           <Reveal fullWidth key={i}>
             <div className="w-full">
               <div className="flex flex-col w-full px-5 pb-5">
-                <h2 className={subtitle({ class: "mt-2 mb-0" })}>
+                <h4 className={subtitle({ class: "mt-2 mb-0" })}>
                   {t(s.name)} - {t(s.field)}
-                </h2>
+                </h4>
                 <span className="text-small text-default-500">
                   {t(s.period)} - {t(s.status)}
                 </span>

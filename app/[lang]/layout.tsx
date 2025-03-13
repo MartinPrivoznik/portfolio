@@ -25,8 +25,8 @@ export async function generateMetadata({
 
   return {
     title: {
-      default: t(siteConfig.name),
-      template: `%s - ${t(siteConfig.name)}`,
+      default: t(siteConfig.title),
+      template: `%s | ${t(siteConfig.title)}`,
     },
     description: t(siteConfig.description),
     authors: { url: "https://privoznik.dev/", name: "Martin Přívozník" },

@@ -5,6 +5,7 @@ export type SiteConfig = typeof siteConfig;
  */
 export const siteConfig = {
   name: "MartinPrivoznik",
+  title: "siteTitle",
   description: "siteDescription",
   keywords: "siteKeywords",
   siteLocales: ["en", "cs", "chewbacca", "groot"],
