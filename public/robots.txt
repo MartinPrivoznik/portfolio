@@ -1,13 +1,4 @@
-User-agent: Googlebot
-Allow: *.ico
-Allow: *.css
-Allow: *.js# global
-Allow: *.png
-Allow: sitemap.xml
-
 User-agent: *
-Disallow: /groot
-Disallow: /chewbacca
-Crawl-Delay: 5
+Allow: /
 
 Sitemap: https://privoznik.dev/sitemap.xml

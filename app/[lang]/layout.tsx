@@ -50,6 +50,8 @@ export async function generateMetadata({
       images: [{ url: "/logo192.png", alt: t(siteConfig.name) }],
     },
     keywords: t(siteConfig.keywords),
+    robots: "index, follow",
+    viewport: "width=device-width, initial-scale=1",
   };
 }
 

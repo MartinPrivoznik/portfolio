@@ -1,34 +1,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://privoznik.dev/</loc>
-        <priority>1</priority>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://privoznik.dev/about</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://privoznik.dev/projects</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://privoznik.dev/cv</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://privoznik.dev/contact</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://privoznik.dev/cs</loc>
-        <priority>1</priority>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://privoznik.dev/cs/about</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://privoznik.dev/cs/projects</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://privoznik.dev/cs/cv</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://privoznik.dev/cs/contact</loc>
+        <lastmod>2025-03-13</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
     </url>
 </urlset>
