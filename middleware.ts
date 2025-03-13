@@ -4,16 +4,11 @@ import { siteConfig } from "./config/site";
 export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
-  const matchingLocale = siteConfig.siteLocales.find(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  );
-
-  //if matching locale doesnt exist or is default, rewrite to default
-  if (!matchingLocale) {
-    return NextResponse.rewrite(
-      new URL(`/${siteConfig.defaultLocales}${pathname}`, request.url)
-    );
-  }
+  const matchingLocale =
+    siteConfig.siteLocales.find(
+      (locale) =>
+        pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    ) ?? siteConfig.defaultLocales;
 
   if (matchingLocale && matchingLocale != siteConfig.defaultLocales) return;
 
@@ -22,8 +17,6 @@ export function middleware(request: NextRequest) {
       new URL(`/${siteConfig.defaultLocales}${pathname}`, request.url)
     );
   }
-
-  return;
 }
 
 export const config = {

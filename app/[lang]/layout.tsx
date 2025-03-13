@@ -1,16 +1,15 @@
-import "@/styles/globals.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
-import { Providers } from "../providers";
 import { Navbar } from "@/components/navbar";
-import clsx from "clsx";
 import { CursorGradient } from "@/components/animations/CursorGradient";
 import { Footer } from "@/components/Footer";
 import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
-import { dir } from "i18next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { useTranslation } from "../i18n";
+import { dir } from "i18next";
+import clsx from "clsx";
+import { fontSans } from "@/config/fonts";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Providers } from "../providers";
 
 export async function generateStaticParams() {
   return siteConfig.siteLocales.map((lang) => ({ lang }));
