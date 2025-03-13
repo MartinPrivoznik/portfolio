@@ -21,7 +21,15 @@ import { usePathname } from "next/navigation";
 import { ThemeSwitch } from "./theme-switch";
 import { buildUrl } from "@/helpers/UrlBuilder";
 import { useTranslation } from "@/app/i18n/client";
-import { LanguagesDropdown } from "./shared/LanguagesDropdown";
+import dynamic from "next/dynamic";
+
+const LanguagesDropdown = dynamic(
+  () =>
+    import("./shared/LanguagesDropdown").then((mod) => mod.LanguagesDropdown),
+  {
+    ssr: false,
+  }
+);
 
 export const Navbar = (props: { lang: string }) => {
   const { t } = useTranslation(props.lang);

@@ -1,6 +1,5 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import React, { useEffect, useRef, useState } from "react";
 
 export const CursorGradient = () => {
