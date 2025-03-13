@@ -20,13 +20,13 @@
     <url>
         <loc>https://privoznik.dev/cv</loc>
         <lastmod>2025-03-13</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://privoznik.dev/contact</loc>
         <lastmod>2025-03-13</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
@@ -50,13 +50,13 @@
     <url>
         <loc>https://privoznik.dev/cs/cv</loc>
         <lastmod>2025-03-13</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://privoznik.dev/cs/contact</loc>
         <lastmod>2025-03-13</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 </urlset>
