@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { siteConfig } from "@/config/site";
 import { Navbar } from "@/components/navbar";
 import { CursorGradient } from "@/components/animations/CursorGradient";
@@ -17,6 +17,14 @@ import { formatAge } from "@/helpers/formatAge";
 export async function generateStaticParams() {
   return siteConfig.siteLocales.map((lang) => ({ lang }));
 }
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  colorScheme: "dark",
+};
 
 export async function generateMetadata({
   params,
