@@ -79,8 +79,12 @@ export const Navbar = (props: { lang: string }) => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2" aria-label="LinkedIn">
-          <Link isExternal href={siteConfig.links.linkedIn}>
+        <NavbarItem className="hidden sm:flex gap-2">
+          <Link
+            isExternal
+            href={siteConfig.links.linkedIn}
+            aria-label="LinkedIn"
+          >
             <LinkedInIcon className="text-default-500" />
           </Link>
           <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
