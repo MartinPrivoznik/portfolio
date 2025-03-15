@@ -10,6 +10,9 @@ import clsx from "clsx";
 import { fontSans } from "@/config/fonts";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Providers } from "../providers";
+import { WithContext } from "schema-dts";
+import { calculateMyAge } from "@/helpers/Calculator";
+import { formatAge } from "@/helpers/formatAge";
 
 export async function generateStaticParams() {
   return siteConfig.siteLocales.map((lang) => ({ lang }));
@@ -53,13 +56,37 @@ export async function generateMetadata({
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
   params: IInternationalizedPageParams;
 }) {
+  const { t } = await useTranslation(params.lang);
+  const age = calculateMyAge();
+
+  const jsonLd: WithContext<any> = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: t("MartinPrivoznik"),
+    url: "https://privoznik.dev",
+    sameAs: [
+      "https://www.linkedin.com/in/martin-p%C5%99%C3%ADvozn%C3%ADk-5b16a0192/",
+      "https://github.com/MartinPrivoznik",
+    ],
+    jobTitle: t("softwareEngineer"),
+    worksFor: {
+      "@type": "Organization",
+      name: "Foxentry",
+    },
+    studentOf: {
+      "@type": "CollegeOrUniversity",
+      name: t("uoePrague"),
+    },
+    description: formatAge(t("basicInformationDesc"), age),
+  };
+
   return (
     <html lang={params.lang} dir={dir(params.lang)} suppressHydrationWarning>
       <head />
@@ -77,6 +104,10 @@ export default function RootLayout({
             <Footer lang={params.lang} />
           </div>
         </Providers>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
       <GoogleAnalytics gaId="G-K7MDGX1K5T" />
     </html>

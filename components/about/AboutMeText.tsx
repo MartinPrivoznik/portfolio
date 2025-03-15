@@ -1,5 +1,6 @@
 "use client";
 
+import { formatAge } from "@/helpers/formatAge";
 import { Reveal } from "../animations/Reveal";
 import { useTranslation } from "@/app/i18n/client";
 
@@ -10,14 +11,9 @@ export const AboutMeText = (props: {
 }) => {
   const { t } = useTranslation(props.lang);
 
-  const formatString = (val: string) => {
-    const res = val.replace("{age}", props.age);
-    return res;
-  };
-
   return (
     <Reveal>
-      <p className="text-justify">{formatString(t(props.desc))}</p>
+      <p className="text-justify">{formatAge(t(props.desc), props.age)}</p>
     </Reveal>
   );
 };
