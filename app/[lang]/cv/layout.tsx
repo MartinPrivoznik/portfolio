@@ -12,6 +12,13 @@ export async function generateMetadata({
 
   return {
     title: t("cv"),
+    alternates: {
+      canonical: "/cv",
+      languages: {
+        en: "/cv",
+        cs: "/cs/cv",
+      },
+    },
   };
 }
 
