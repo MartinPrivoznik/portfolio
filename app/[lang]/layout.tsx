@@ -40,7 +40,7 @@ export async function generateMetadata({
       template: `%s | ${t(siteConfig.title)}`,
     },
     description: t(siteConfig.description),
-    authors: { url: "https://privoznik.dev/", name: "Martin Přívozník" },
+    authors: { name: "Martin Přívozník" },
     icons: {
       icon: "/favicon.ico",
       shortcut: "/favicon.ico",
@@ -61,6 +61,14 @@ export async function generateMetadata({
     },
     keywords: t(siteConfig.keywords),
     robots: "index, follow",
+    alternates: {
+      canonical: "/",
+      languages: {
+        en: "/",
+        cs: "/cs",
+      },
+    },
+    category: "CV",
   };
 }
 

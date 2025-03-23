@@ -378,7 +378,7 @@ export const siteConfig = {
       isExternal: false,
     },
     {
-      url: "https://420-countdown.privoznik.dev/",
+      url: "https://420-countdown.com/",
       imgPath: "/images/uselessProjects/420-countdown/420-mascot.webp",
       isExternal: true,
     },
