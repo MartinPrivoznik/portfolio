@@ -13,6 +13,7 @@ export async function generateMetadata({
 
   return {
     title: t("projects"),
+    description: t("projectsDescription"),
     alternates: {
       canonical: buildUrl(params.lang, "/projects"),
       languages: {
