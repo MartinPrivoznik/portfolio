@@ -40,6 +40,7 @@ export async function generateMetadata({
       template: `%s | ${t(siteConfig.title)}`,
     },
     description: t(siteConfig.description),
+    metadataBase: new URL("https://privoznik.dev"),
     authors: { name: "Martin Přívozník" },
     icons: {
       icon: "/favicon.ico",
