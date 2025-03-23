@@ -13,6 +13,7 @@ import { Providers } from "../providers";
 import { WithContext } from "schema-dts";
 import { calculateMyAge } from "@/helpers/Calculator";
 import { formatAge } from "@/helpers/formatAge";
+import { buildUrl } from "@/helpers/UrlBuilder";
 
 export async function generateStaticParams() {
   return siteConfig.siteLocales.map((lang) => ({ lang }));
@@ -63,7 +64,7 @@ export async function generateMetadata({
     keywords: t(siteConfig.keywords),
     robots: "index, follow",
     alternates: {
-      canonical: "/",
+      canonical: buildUrl(params.lang, "/"),
       languages: {
         en: "/",
         cs: "/cs",

@@ -1,4 +1,5 @@
 import { useTranslation } from "@/app/i18n";
+import { buildUrl } from "@/helpers/UrlBuilder";
 import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
 import { Metadata } from "next";
 
@@ -13,7 +14,7 @@ export async function generateMetadata({
   return {
     title: t("projects"),
     alternates: {
-      canonical: "/projects",
+      canonical: buildUrl(params.lang, "/projects"),
       languages: {
         en: "/projects",
         cs: "/cs/projects",
