@@ -97,11 +97,17 @@ export default async function RootLayout({
       "@type": "Organization",
       name: "Foxentry",
     },
-    studentOf: {
+    alumniOf: {
       "@type": "CollegeOrUniversity",
       name: t("uoePrague"),
     },
     description: formatAge(t("basicInformationDesc"), age),
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: t("prague"),
+      addressCountry: t("czechRepublic"),
+    },
+    birthDate: "2000-09-20",
   };
 
   return (
