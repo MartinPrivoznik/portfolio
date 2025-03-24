@@ -9,7 +9,6 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
@@ -80,19 +79,30 @@ export const Navbar = (props: { lang: string }) => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link
-            isExternal
+          <NextLink
+            target="_blank"
+            rel="noopener noreferrer"
             href={siteConfig.links.linkedIn}
             aria-label="LinkedIn"
           >
             <LinkedInIcon className="text-default-500" />
-          </Link>
-          <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
+          </NextLink>
+          <NextLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href={siteConfig.links.discord}
+            aria-label="Discord"
+          >
             <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal href={siteConfig.links.github} aria-label="Github">
+          </NextLink>
+          <NextLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href={siteConfig.links.github}
+            aria-label="Github"
+          >
             <GithubIcon className="text-default-500" />
-          </Link>
+          </NextLink>
           <LanguagesDropdown lang={props.lang} />
           <ThemeSwitch lang={props.lang} />
         </NavbarItem>
@@ -109,30 +119,44 @@ export const Navbar = (props: { lang: string }) => {
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
+              <NextLink
                 color={
                   index === siteConfig.navItems.length - 1
                     ? "primary"
                     : "foreground"
                 }
                 href={buildUrl(props.lang, item.href)}
-                size="lg"
+                className="text-lg"
               >
                 {t(item.label)}
-              </Link>
+              </NextLink>
             </NavbarMenuItem>
           ))}
         </div>
         <div className="mx-4 mt-2 flex gap-2">
-          <Link isExternal href={siteConfig.links.linkedIn}>
+          <NextLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href={siteConfig.links.linkedIn}
+          >
             <LinkedInIcon className="text-default-500" />
-          </Link>
-          <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
+          </NextLink>
+          <NextLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href={siteConfig.links.discord}
+            aria-label="Discord"
+          >
             <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal href={siteConfig.links.github} aria-label="Github">
+          </NextLink>
+          <NextLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href={siteConfig.links.github}
+            aria-label="Github"
+          >
             <GithubIcon className="text-default-500" />
-          </Link>
+          </NextLink>
         </div>
       </NavbarMenu>
     </NextUINavbar>
