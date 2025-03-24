@@ -35,16 +35,44 @@ export default async function Home({
             {t("wannaKnowMore")}
           </h2>
         </RevealSlide>
-        <Link
-          href={buildUrl(params.lang, "/about")}
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-        >
-          {t("aboutMe")}
-        </Link>
+        <div className="flex gap-3 sm:gap-6">
+          <Link
+            href={buildUrl(params.lang, "/about")}
+            className={
+              buttonStyles({
+                color: "primary",
+                radius: "full",
+                variant: "shadow",
+              }) + " font-semibold"
+            }
+          >
+            {t("aboutMe")}
+          </Link>
+          <Link
+            href={buildUrl(params.lang, "/projects")}
+            className={
+              buttonStyles({
+                color: "primary",
+                radius: "full",
+                variant: "shadow",
+              }) + " font-semibold"
+            }
+          >
+            {t("myProjects")}
+          </Link>
+          <Link
+            href={buildUrl(params.lang, "/cv")}
+            className={
+              buttonStyles({
+                color: "primary",
+                radius: "full",
+                variant: "shadow",
+              }) + " font-semibold"
+            }
+          >
+            {t("cv")}
+          </Link>
+        </div>
       </div>
     </section>
   );

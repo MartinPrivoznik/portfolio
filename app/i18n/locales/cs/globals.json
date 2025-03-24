@@ -145,5 +145,6 @@
   "servicesSubheading": "Přehled toho, co Vám můžu nabídnout",
   "techstack": "Techstack",
   "techstackDescription": "Jsem vášnivý full-stack vývojář se zkušenostmi ve vytváření škálovatelných a vysoce výkonných aplikací pomocí moderních technologií, jako je Next.js, React a Tailwind. Mám zkušenosti s vývojem frontendu i backendu, využívající JavaScript, TypeScript a Node.js spolu s .NET pro robustní řešení na straně serveru. Mám zkušenosti se správou databází pomocí MongoDB a PostgreSQL a zkušenosti s optimalizací nasazení pomocí GitLab CI/CD, Docker a Redis. Vytvářím škálovatelné a efektivní řešení na míru.",
-  "contactMe": "Kontaktuj mě"
+  "contactMe": "Kontaktuj mě",
+  "myProjects": "Mé projekty"
 }

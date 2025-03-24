@@ -145,5 +145,6 @@
   "servicesSubheading": "An overview of what I can offer you",
   "techstack": "Techstack",
   "techstackDescription": "I'm a passionate full-stack developer with expertise in building scalable and high-performance applications using modern technologies like Next.js, React, and Tailwind. Proficient in both frontend and backend development, leveraging JavaScript, TypeScript, and Node.js, alongside .NET for robust server-side solutions. Skilled in database management with MongoDB and PostgreSQL, and experienced in optimizing workflows with GitLab CI/CD, Docker, and Redis. Dedicated to crafting seamless user experiences and efficient, maintainable codebases.",
-  "contactMe": "Contact me"
+  "contactMe": "Contact me",
+  "myProjects": "My projects"
 }
