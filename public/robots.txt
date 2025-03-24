@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /groot
+Disallow: /chewbacca
 Allow: /
 
 Sitemap: https://privoznik.dev/sitemap.xml
