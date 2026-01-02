@@ -6,6 +6,7 @@ import { ContactFormType } from "@/types";
 import RunningButton from "./RunningButton";
 import { useTranslation } from "@/app/i18n/client";
 import { contactFormValidationSchema } from "@/validators/contactFormValidationSchema";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 interface IContactFormInputProps {
   loading: boolean;
@@ -26,6 +27,7 @@ export const ContactFormInputs = ({
     fullName: "",
     email: "",
     text: "",
+    captchaToken: "",
   } as ContactFormType;
 
   return (
@@ -113,6 +115,28 @@ export const ContactFormInputs = ({
                   text={t("sendEmail")}
                 />
               </div>
+            </div>
+            <div className="mt-4 flex flex-col items-center justify-center">
+              <Turnstile
+                siteKey={
+                  process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ||
+                  "1x00000000000000000000AA"
+                }
+                onSuccess={(token) => {
+                  props.setFieldValue("captchaToken", token);
+                }}
+                onError={() => {
+                  props.setFieldValue("captchaToken", "");
+                }}
+                onExpire={() => {
+                  props.setFieldValue("captchaToken", "");
+                }}
+              />
+              {props.errors.captchaToken && props.touched.captchaToken && (
+                <p className="text-danger text-sm mt-1">
+                  {props.errors.captchaToken}
+                </p>
+              )}
             </div>
           </Form>
         );

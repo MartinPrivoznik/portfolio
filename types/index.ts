@@ -8,4 +8,5 @@ export type ContactFormType = {
   fullName: string;
   email: string;
   text: string;
+  captchaToken: string;
 };

@@ -15,5 +15,7 @@ export const contactFormValidationSchema = (
     text: string()
       .required(t("fieldRequired"))
       .max(1000, t("enterMaximumOf1000Chars")),
+    captchaToken: string()
+      .required(t("captchaRequired")),
   });
 };

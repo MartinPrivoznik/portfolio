@@ -17,7 +17,37 @@ export async function sendContactEmail(
 
   if (!isValid) return false;
 
-  console.log("Email request received: ", formData);
+  // Verify Cloudflare Turnstile token
+  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+  if (!turnstileSecret || !formData.captchaToken) {
+    console.log("Missing Turnstile configuration or token");
+    return false;
+  }
+
+  try {
+    const turnstileResponse = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          secret: turnstileSecret,
+          response: formData.captchaToken,
+        }),
+      }
+    );
+
+    const turnstileData = await turnstileResponse.json();
+
+    if (!turnstileData.success) {
+      return false;
+    }
+  } catch (error) {
+    console.log("Turnstile verification error:", error);
+    return false;
+  }
 
   const smtpConfig: SMTPTransport.Options = {
     host: process.env.SMTP_HOST,

@@ -50,6 +50,7 @@
   "enterMaximumOf80Chars": "Zadejte maximálně 80 znaků",
   "enterValidEmailAddress": "Zadejte platnou emailovou adresu",
   "enterMaximumOf1000Chars": "Zadejte maximálně 1000 znaků",
+  "captchaRequired": "Prosím dokončete CAPTCHA ověření",
   "fullName": "Celé jméno",
   "yourEmail": "Váš email",
   "tellMeAboutYourProject": "Řekněte mi o svém projektu",

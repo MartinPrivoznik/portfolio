@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@marsidev/react-turnstile": "^1.4.1",
     "@next/third-parties": "^14.1.2",
     "@nextui-org/button": "2.0.26",
     "@nextui-org/card": "^2.0.24",

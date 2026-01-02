@@ -50,6 +50,7 @@
   "enterMaximumOf80Chars": "Enter a maximum of 80 characters",
   "enterValidEmailAddress": "Enter a valid email address",
   "enterMaximumOf1000Chars": "Enter a maximum of 1000 characters",
+  "captchaRequired": "Please complete the CAPTCHA verification",
   "fullName": "Full name",
   "yourEmail": "Your email",
   "tellMeAboutYourProject": "Tell me about your project",
