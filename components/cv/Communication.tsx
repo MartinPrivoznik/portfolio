@@ -5,10 +5,10 @@ import { Reveal } from "../animations/Reveal";
 import { RevealSlide } from "../animations/RevealSlide";
 import { subtitle } from "../primitives";
 import { siteConfig } from "@/config/site";
-import { useTranslation } from "@/app/i18n";
+import { useTranslation } from "@/app/i18n/client";
 
-export const CvCommunication = async (props: { lang: string }) => {
-  const { t } = await useTranslation(props.lang);
+export const CvCommunication = (props: { lang: string }) => {
+  const { t } = useTranslation(props.lang);
   return (
     <div className="flex flex-col items-center w-full px-5">
       <RevealSlide width="fit-content">
