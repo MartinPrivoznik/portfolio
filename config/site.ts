@@ -107,25 +107,6 @@ export const siteConfig = {
         { text: "Node.js", importance: "default" },
       ],
     },
-    {
-      name: "Dreamind s.r.o.",
-      period: "Aug 2022",
-      role: "dreamindRole",
-      length: "now",
-      urlText: "dreamind.cz",
-      url: "https://dreamind.cz/",
-      description: "dreamindDesc",
-      logoUrl: "/images/dreamind-logo.webp",
-      skills: [
-        { text: "C#", importance: "primary" },
-        { text: "ASP.NET", importance: "primary" },
-        { text: "Next.JS", importance: "primary" },
-        { text: "Tailwind", importance: "default" },
-        { text: "SASS", importance: "default" },
-        { text: "PostgreSQL", importance: "default" },
-        { text: "Firebase", importance: "default" },
-      ],
-    },
   ],
   experiences: [
     {
@@ -209,18 +190,8 @@ export const siteConfig = {
       urlText: "www.prumyslovkaliberec.cz",
     },
     {
-      name: "fitName",
-      period: "sep2020toapr2022",
-      status: "fitStatus",
-      field: "fitField",
-      logoUrl:
-        "https://fit.cvut.cz/media-a-pr/corporate-identity/logo-fit-en-modra.svg",
-      url: "https://fit.cvut.cz/",
-      urlText: "fit.cvut.cz",
-    },
-    {
       name: "fisName",
-      period: "sep2023tonow",
+      period: "fisVsePeriod",
       status: "fisStatus",
       field: "fisField",
       logoUrl: "/images/vse.webp",
