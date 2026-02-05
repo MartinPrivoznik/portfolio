@@ -10,6 +10,8 @@ import { subtitle } from "@/components/primitives";
 import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
 import { buildUrl } from "@/helpers/UrlBuilder";
 import { useTranslation } from "../i18n";
+import { Techstack } from "@/components/shared/Techstack";
+import { Reveal } from "@/components/animations/Reveal";
 
 export default async function Home({
   params,
@@ -20,11 +22,19 @@ export default async function Home({
   return (
     <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 w-full overflow-x-hidden pt-16">
       <Hero lang={params.lang} />
+
       <div className="container flex flex-col items-center justify-center gap-4">
-        <CurrentPositionCards
-          title={t("currentPositions")}
-          lang={params.lang}
-        />
+        <div className="flex flex-col lg:flex-row w-full xl:px-20 gap-4 lg:gap-6">
+          <div className="w-full lg:w-1/2">
+            <CurrentPositionCards
+              title={t("currentPositions")}
+              lang={params.lang}
+            />
+          </div>
+          <div className="lg:w-1/2 mx-3 flex justify-center">
+            <Techstack lang={params.lang} />
+          </div>
+        </div>
         <Divider />
         <ExperienceCards title={t("experienceRoadmap")} lang={params.lang} />
         <Divider />

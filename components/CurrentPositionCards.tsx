@@ -14,7 +14,7 @@ export const CurrentPositionCards = async (props: {
 }) => {
   const { t } = await useTranslation(props.lang);
   return (
-    <div className="flex flex-col justify-center items-center h-full px-4">
+    <div className="flex flex-col justify-center items-center h-full w-full px-4">
       <RevealSlide width="fit-content">
         <h3 className={subtitle({ class: "mt-2 text-center" })}>
           {props.title}

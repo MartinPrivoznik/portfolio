@@ -49,10 +49,6 @@ export const siteConfig = {
       label: "cv",
       href: "/cv",
     },
-    // {
-    //   label: "services",
-    //   href: "/services",
-    // },
     {
       label: "contact",
       href: "/contact",
@@ -75,10 +71,6 @@ export const siteConfig = {
       label: "cv",
       href: "/cv",
     },
-    // {
-    //   label: "services",
-    //   href: "/services",
-    // },
     {
       label: "contact",
       href: "/contact",
@@ -435,63 +427,79 @@ export const siteConfig = {
     },
   ],
   services: {
-    techstack: [
-      {
-        iconPath: "/images/techstack/nextjs-icon.svg",
-        name: "Next.js",
-      },
-      {
-        iconPath: "/images/techstack/svelte.svg",
-        name: "Svelte",
-      },
-      {
-        iconPath: "/images/techstack/NestJS.svg",
-        name: "NestJS",
-      },
-      {
-        iconPath: "/images/techstack/electron.svg",
-        name: "Electron",
-      },
-      {
-        iconPath: "/images/techstack/dotnet.svg",
-        name: ".NET",
-      },
-      {
-        iconPath: "/images/techstack/C-Sharp.svg",
-        name: "C#",
-      },
-      {
-        iconPath: "/images/techstack/typescript-icon.svg",
-        name: "Typescript",
-      },
-      {
-        iconPath: "/images/techstack/ms-sql.svg",
-        name: "MS SQL",
-      },
-      {
-        iconPath: "/images/techstack/postgresql.svg",
-        name: "PostgreSQL",
-      },
-      {
-        iconPath: "/images/techstack/mongodb-icon.svg",
-        name: "MongoDB",
-      },
-      {
-        iconPath: "/images/techstack/redis.svg",
-        name: "Redis",
-      },
-      {
-        iconPath: "/images/techstack/docker-icon.svg",
-        name: "Docker",
-      },
-      {
-        iconPath: "/images/techstack/azure-devops.svg",
-        name: "Azure DevOps",
-      },
-      {
-        iconPath: "/images/techstack/gitlab.svg",
-        name: "GitLab CI/CD",
-      },
-    ],
+    techstack: {
+      frameworks: [
+        {
+          iconPath: "/images/techstack/nextjs-icon.svg",
+          name: "Next.js",
+        },
+        {
+          iconPath: "/images/techstack/svelte.svg",
+          name: "Svelte",
+        },
+        {
+          iconPath: "/images/techstack/NestJS.svg",
+          name: "NestJS",
+        },
+        {
+          iconPath: "/images/techstack/electron.svg",
+          name: "Electron",
+        },
+        {
+          iconPath: "/images/techstack/dotnet.svg",
+          name: ".NET",
+        },
+      ],
+      programmingLanguages: [
+        {
+          iconPath: "/images/techstack/C-Sharp.svg",
+          name: "C#",
+        },
+        {
+          iconPath: "/images/techstack/cpp.svg",
+          name: "C++",
+        },
+        {
+          iconPath: "/images/techstack/typescript-icon.svg",
+          name: "TypeScript",
+        },
+      ],
+      databases: [
+        {
+          iconPath: "/images/techstack/ms-sql.svg",
+          name: "MS SQL",
+        },
+        {
+          iconPath: "/images/techstack/postgresql.svg",
+          name: "PostgreSQL",
+        },
+        {
+          iconPath: "/images/techstack/mongodb-icon.svg",
+          name: "MongoDB",
+        },
+        {
+          iconPath: "/images/techstack/redis.svg",
+          name: "Redis",
+        },
+      ],
+      automation: [
+        {
+          iconPath: "/images/techstack/docker-icon.svg",
+          name: "Docker",
+        },
+        {
+          iconPath: "/images/techstack/azure-devops.svg",
+          name: "Azure DevOps",
+        },
+        {
+          iconPath: "/images/techstack/gitlab.svg",
+          name: "GitLab CI/CD",
+        },
+        {
+          iconPath: "/images/techstack/git.svg",
+          name: "Git",
+        },
+      ],
+    },
   },
 };
