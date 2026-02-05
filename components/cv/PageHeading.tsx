@@ -16,10 +16,10 @@ import { useTranslation } from "@/app/i18n/client";
 export const CvPageHeading = (props: { lang: string }) => {
   const { t } = useTranslation(props.lang);
   const [postHeadingText, setPostHeadingText] = useState<string | undefined>(
-    "[.pdf]"
+    "[.pdf]",
   );
   const [subHeadingText, setSubHeadingText] = useState<string>(
-    t("soIDontHaveToSendPdf")
+    t("soIDontHaveToSendPdf"),
   );
   const modal = useDisclosure();
 
@@ -34,10 +34,9 @@ export const CvPageHeading = (props: { lang: string }) => {
       <SubpageHeader
         heading={t("cv")}
         subheading={subHeadingText}
-        imgSrc="/images/cv-hero-min.webp"
+        imgSrc="/images/about/1-min.webp"
         imgWidth={430}
         imgHeight={300}
-        pngImg
         postHeadingText={postHeadingText}
         postHeadingClickAction={toggleRickRoll}
       />

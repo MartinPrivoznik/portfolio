@@ -441,28 +441,40 @@ export const siteConfig = {
         name: "Next.js",
       },
       {
-        iconPath: "/images/techstack/react.svg",
-        name: "React",
+        iconPath: "/images/techstack/svelte.svg",
+        name: "Svelte",
       },
       {
-        iconPath: "/images/techstack/tailwindcss-icon.svg",
-        name: "Tailwind",
+        iconPath: "/images/techstack/NestJS.svg",
+        name: "NestJS",
       },
       {
-        iconPath: "/images/techstack/javascript.svg",
-        name: "Javascript",
+        iconPath: "/images/techstack/electron.svg",
+        name: "Electron",
+      },
+      {
+        iconPath: "/images/techstack/dotnet.svg",
+        name: ".NET",
+      },
+      {
+        iconPath: "/images/techstack/C-Sharp.svg",
+        name: "C#",
       },
       {
         iconPath: "/images/techstack/typescript-icon.svg",
         name: "Typescript",
       },
       {
-        iconPath: "/images/techstack/nodejs-icon.svg",
-        name: "Node.js",
+        iconPath: "/images/techstack/ms-sql.svg",
+        name: "MS SQL",
       },
       {
-        iconPath: "/images/techstack/dotnet.svg",
-        name: ".NET",
+        iconPath: "/images/techstack/postgresql.svg",
+        name: "PostgreSQL",
+      },
+      {
+        iconPath: "/images/techstack/mongodb-icon.svg",
+        name: "MongoDB",
       },
       {
         iconPath: "/images/techstack/redis.svg",
@@ -473,12 +485,8 @@ export const siteConfig = {
         name: "Docker",
       },
       {
-        iconPath: "/images/techstack/mongodb-icon.svg",
-        name: "MongoDB",
-      },
-      {
-        iconPath: "/images/techstack/postgresql.svg",
-        name: "PostgreSQL",
+        iconPath: "/images/techstack/azure-devops.svg",
+        name: "Azure DevOps",
       },
       {
         iconPath: "/images/techstack/gitlab.svg",
