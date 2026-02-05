@@ -19,7 +19,7 @@ export const Hero = (props: { lang: string }) => {
     <HideOnScroll>
       <div className="flex relative w-full px-5 md:px-24 border-b border-zinc-700 min-h-[240px]">
         <div className="hidden lg:block w-1/6"></div>
-        <div className="w-2/3 lg:w-2/6 flex items-center justify-center">
+        <div className="w-2/3 lg:w-3/6 flex items-center justify-center">
           <HeroText lang={props.lang} />
         </div>
         <motion.div

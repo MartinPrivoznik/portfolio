@@ -19,16 +19,9 @@ export const HeroText = (props: { lang: string }) => {
           </h2>
         </div>
       </RevealSlide>
-      <br />
       <RevealSlide width="fit-content">
         <div className="p-3">
-          <h3 className={subtitle({ class: "mt-2" })}>
-            {t("heroSubheading1")}{" "}
-            <Link href="https://dreamind.cz/" target="_blank">
-              Dreamind
-            </Link>{" "}
-            {t("heroSubheading2")}
-          </h3>
+          <h3 className={subtitle()}>{t("heroSubheading1")}</h3>
         </div>
       </RevealSlide>
     </div>
