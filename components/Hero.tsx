@@ -27,7 +27,6 @@ export const Hero = (props: { lang: string }) => {
           variants={{
             hidden: { opacity: 0.5, x: -30 },
             visible: { opacity: 1, x: 0 },
-            x: { type: "spring" },
           }}
           initial="hidden"
           transition={{ duration: 0.5 }}

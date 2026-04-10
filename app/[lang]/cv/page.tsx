@@ -12,48 +12,48 @@ import { subtitle } from "@/components/primitives";
 import { Techstack } from "@/components/shared/Techstack";
 import { buildUrl } from "@/helpers/UrlBuilder";
 import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
-import { Divider } from "@nextui-org/divider";
-import { button as buttonStyles } from "@nextui-org/theme";
+import { Divider, button as buttonStyles } from "@heroui/react";
 import Link from "next/link";
 
 export default async function CVPage({
   params,
 }: {
-  params: IInternationalizedPageParams;
+  params: Promise<IInternationalizedPageParams>;
 }) {
-  const { t } = await useTranslation(params.lang);
+  const { lang } = await params;
+  const { t } = await useTranslation(lang);
 
   return (
     <>
-      <CvPageHeading lang={params.lang} />
+      <CvPageHeading lang={lang} />
       <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-3 w-full overflow-x-hidden">
         <div className="container flex flex-col items-center justify-center gap-4">
           <div className="flex flex-col lg:flex-row w-full mb-3">
             <HideOnScrollSoft fullWidth>
-              <CvCurrentPosition lang={params.lang} />
+              <CvCurrentPosition lang={lang} />
             </HideOnScrollSoft>
             <Divider className="lg:hidden" />
             <HideOnScrollSoft fullWidth>
-              <Techstack lang={params.lang} />
+              <Techstack lang={lang} />
             </HideOnScrollSoft>
           </div>
           <Divider />
           <HideOnScrollSoft>
-            <CvEmploymentHistory lang={params.lang} />
+            <CvEmploymentHistory lang={lang} />
           </HideOnScrollSoft>
           <Divider />
           <div className="flex flex-col lg:flex-row w-full">
             <HideOnScrollSoft fullWidth>
-              <CvEducation lang={params.lang} />
+              <CvEducation lang={lang} />
             </HideOnScrollSoft>
             <Divider className="lg:hidden" />
             <HideOnScrollSoft fullWidth>
-              <CvCommunication lang={params.lang} />
+              <CvCommunication lang={lang} />
             </HideOnScrollSoft>
           </div>
           <Divider />
           <HideOnScrollSoft>
-            <CvAchievements lang={params.lang} />
+            <CvAchievements lang={lang} />
           </HideOnScrollSoft>
           <Divider />
           <RevealSlide width="fit-content">
@@ -63,7 +63,7 @@ export default async function CVPage({
           </RevealSlide>
           <div className="flex gap-3 sm:gap-6">
             <Link
-              href={buildUrl(params.lang, "/contact")}
+              href={buildUrl(lang, "/contact")}
               className={
                 buttonStyles({
                   color: "primary",

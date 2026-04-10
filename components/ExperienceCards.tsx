@@ -1,11 +1,16 @@
 import { siteConfig } from "@/config/site";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
-import { Divider } from "@nextui-org/divider";
-import { Image } from "@nextui-org/image";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Divider,
+  Image,
+  Chip,
+} from "@heroui/react";
 import { subtitle } from "./primitives";
 import { Reveal } from "./animations/Reveal";
 import { RevealSlide } from "./animations/RevealSlide";
-import { Chip } from "@nextui-org/chip";
 import { useTranslation } from "@/app/i18n";
 
 export const ExperienceCards = async (props: {

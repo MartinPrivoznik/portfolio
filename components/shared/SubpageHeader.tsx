@@ -78,7 +78,6 @@ export const SubpageHeader = (props: {
             variants={{
               hidden: { opacity: 0, x: 75 },
               visible: { opacity: 1, x: 0 },
-              x: { type: "spring" },
             }}
             initial="hidden"
             transition={{ duration: 0.5 }}

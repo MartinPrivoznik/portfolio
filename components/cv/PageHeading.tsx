@@ -9,8 +9,8 @@ import {
   ModalFooter,
   ModalHeader,
   useDisclosure,
-} from "@nextui-org/modal";
-import { Button } from "@nextui-org/button";
+  Button,
+} from "@heroui/react";
 import { useTranslation } from "@/app/i18n/client";
 
 export const CvPageHeading = (props: { lang: string }) => {

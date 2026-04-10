@@ -1,8 +1,6 @@
 import { siteConfig } from "@/config/site";
-import { Divider } from "@nextui-org/divider";
+import { Divider, Link, Image } from "@heroui/react";
 import { Reveal } from "../animations/Reveal";
-import { Link } from "@nextui-org/link";
-import { Image } from "@nextui-org/image";
 import { buildUrl } from "@/helpers/UrlBuilder";
 
 export const UselessProjects = (props: { lang: string }) => {

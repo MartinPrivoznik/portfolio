@@ -6,14 +6,15 @@ import { SubpageHeader } from "@/components/shared/SubpageHeader";
 import { buildUrl } from "@/helpers/UrlBuilder";
 import IInternationalizedPageParams from "@/models/IInternationalizedPageParams";
 import Link from "next/link";
-import { button as buttonStyles } from "@nextui-org/theme";
+import { button as buttonStyles } from "@heroui/react";
 
 export default async function AboutPage({
   params,
 }: {
-  params: IInternationalizedPageParams;
+  params: Promise<IInternationalizedPageParams>;
 }) {
-  const { t } = await useTranslation(params.lang);
+  const { lang } = await params;
+  const { t } = await useTranslation(lang);
   return (
     <>
       <SubpageHeader
@@ -26,7 +27,7 @@ export default async function AboutPage({
       />
       <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-3 w-full overflow-x-hidden">
         <div className="container flex flex-col items-center justify-center gap-4"></div>
-        <AboutMeList lang={params.lang} />
+        <AboutMeList lang={lang} />
         <RevealSlide width="fit-content">
           <h2 className={subtitle({ class: "mt-2 text-center" })}>
             {t("contactSubheading")}
@@ -34,7 +35,7 @@ export default async function AboutPage({
         </RevealSlide>
         <div className="flex gap-3 sm:gap-6">
           <Link
-            href={buildUrl(params.lang, "/contact")}
+            href={buildUrl(lang, "/contact")}
             className={
               buttonStyles({
                 color: "primary",

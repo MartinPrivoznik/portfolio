@@ -1,9 +1,8 @@
 import { siteConfig } from "@/config/site";
-import { Divider } from "@nextui-org/divider";
+import { Divider, Image } from "@heroui/react";
 import { Reveal } from "../animations/Reveal";
 import { RevealSlide } from "../animations/RevealSlide";
 import { subtitle } from "../primitives";
-import { Image } from "@nextui-org/image";
 import { useTranslation } from "@/app/i18n";
 import { AboutMeText } from "./AboutMeText";
 import { calculateMyAge } from "@/helpers/Calculator";

@@ -30,10 +30,14 @@ export const viewport: Viewport = {
 export async function generateMetadata({
   params,
 }: {
-  params: IInternationalizedPageParams;
+  params: Promise<IInternationalizedPageParams>;
 }): Promise<Metadata> {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { t } = await useTranslation(params.lang);
+  const { lang } = await params;
+  const { t } = await useTranslation(lang);
+  const alternateLanguages = Object.fromEntries(
+    siteConfig.siteLocales.map((locale) => [locale, buildUrl(locale, "/")]),
+  );
 
   return {
     title: {
@@ -56,19 +60,20 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "website",
-      url: "https://privoznik.dev/",
+      url: `https://privoznik.dev${buildUrl(lang, "/")}`,
       title: t(siteConfig.name),
       description: t(siteConfig.description),
       images: [{ url: "/logo192.png", alt: t(siteConfig.name) }],
+      locale: lang,
+      alternateLocale: siteConfig.siteLocales.filter(
+        (locale) => locale !== lang,
+      ),
     },
     keywords: t(siteConfig.keywords),
     robots: "index, follow",
     alternates: {
-      canonical: buildUrl(params.lang, "/"),
-      languages: {
-        en: "/",
-        cs: "/cs",
-      },
+      canonical: buildUrl(lang, "/"),
+      languages: alternateLanguages,
     },
     category: "CV",
   };
@@ -79,9 +84,10 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: IInternationalizedPageParams;
+  params: Promise<IInternationalizedPageParams>;
 }) {
-  const { t } = await useTranslation(params.lang);
+  const { lang } = await params;
+  const { t } = await useTranslation(lang);
   const age = calculateMyAge();
 
   const jsonLd: WithContext<any> = {
@@ -112,20 +118,20 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={params.lang} dir={dir(params.lang)} suppressHydrationWarning>
+    <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
       <head />
       <body
         className={clsx(
           "bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col min-h-screen">
             <CursorGradient />
-            <Navbar lang={params.lang} />
+            <Navbar lang={lang} />
             <main className="w-full flex-grow">{children}</main>
-            <Footer lang={params.lang} />
+            <Footer lang={lang} />
           </div>
         </Providers>
         <script

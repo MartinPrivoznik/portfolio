@@ -6,9 +6,9 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-} from "@nextui-org/dropdown";
-import { Image } from "@nextui-org/image";
-import { Link } from "@nextui-org/link";
+  Image,
+  Link,
+} from "@heroui/react";
 import { useRouter } from "next/navigation";
 
 export const LanguagesDropdown = (props: { lang: string }) => {
@@ -18,7 +18,7 @@ export const LanguagesDropdown = (props: { lang: string }) => {
     siteConfig.siteLocalesData.find((sld) => sld.name == props.lang) ??
     siteConfig.siteLocalesData[0];
   const nonActiveLangs = siteConfig.siteLocalesData.filter(
-    (sld) => sld.name != props.lang
+    (sld) => sld.name != props.lang,
   );
 
   const nonActiveLangOptions = nonActiveLangs.map((nal, i) => {

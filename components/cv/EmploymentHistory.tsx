@@ -2,7 +2,7 @@ import { siteConfig } from "@/config/site";
 import { RevealSlide } from "../animations/RevealSlide";
 import { subtitle } from "../primitives";
 import { Reveal } from "../animations/Reveal";
-import { Link } from "@nextui-org/link";
+import { Link } from "@heroui/react";
 import { useTranslation } from "@/app/i18n";
 
 export const CvEmploymentHistory = async (props: { lang: string }) => {
@@ -14,21 +14,27 @@ export const CvEmploymentHistory = async (props: { lang: string }) => {
           {t("employmentHistory")}
         </h3>
       </RevealSlide>
-      <div className="px-5 w-full">
+      <div className="px-5 w-full mt-3">
         {siteConfig.experiences.map((s, i) => (
           <Reveal fullWidth key={i}>
-            <div className="w-full">
-              <div className="flex flex-col w-full px-5 pb-5">
-                <h4 className={subtitle({ class: "mt-2 mb-0" })}>
+            <div className="w-full relative pl-8 pb-6 border-l-2 border-default-200">
+              <span
+                className="absolute -left-[9px] top-2 block h-4 w-4 rounded-full bg-primary shadow-sm"
+                aria-hidden="true"
+              />
+              <div className="flex flex-col w-full pl-5">
+                <h4 className={subtitle({ class: "mt-0 mb-0" })}>
                   {t(s.role)} {t("at")} {s.name}
                 </h4>
                 <span className="text-small text-default-500">
                   {t(s.period)} - {t(s.length)}
                 </span>
-                <Link href={s.url} isExternal>
+                <Link href={s.url} isExternal className="w-fit">
                   {s.urlText}
                 </Link>
-                <p className="pt-2 text-justify">{t(s.description)}</p>
+                <p className="pt-2 text-justify text-default-700">
+                  {t(s.description)}
+                </p>
               </div>
             </div>
           </Reveal>

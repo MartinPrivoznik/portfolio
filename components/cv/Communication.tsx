@@ -1,6 +1,6 @@
 "use client";
 
-import { Slider } from "@nextui-org/slider";
+import { Slider } from "@heroui/react";
 import { Reveal } from "../animations/Reveal";
 import { RevealSlide } from "../animations/RevealSlide";
 import { subtitle } from "../primitives";

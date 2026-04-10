@@ -1,11 +1,9 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
-import { Divider } from "@nextui-org/divider";
+import { Divider, Chip, Link } from "@heroui/react";
 import { subtitle } from "../primitives";
-import { Chip } from "@nextui-org/chip";
 import { Reveal } from "../animations/Reveal";
-import { Link } from "@nextui-org/link";
 import { useTranslation } from "@/app/i18n/client";
 
 export const RealProjects = (props: { lang: string }) => {

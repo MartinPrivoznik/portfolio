@@ -6,9 +6,10 @@ import IInternationalizedPageParams from "@/models/IInternationalizedPageParams"
 export default async function ContactPage({
   params,
 }: {
-  params: IInternationalizedPageParams;
+  params: Promise<IInternationalizedPageParams>;
 }) {
-  const { t } = await useTranslation(params.lang);
+  const { lang } = await params;
+  const { t } = await useTranslation(lang);
   return (
     <>
       <SubpageHeader
@@ -20,7 +21,7 @@ export default async function ContactPage({
       />
       <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-3 w-full overflow-x-hidden">
         <div className="container flex flex-col items-center justify-center gap-4">
-          <ContactForm lang={params.lang} />
+          <ContactForm lang={lang} />
         </div>
       </section>
     </>

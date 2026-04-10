@@ -1,7 +1,6 @@
 "use client";
 
-import { Button } from "@nextui-org/button";
-import { Spinner } from "@nextui-org/spinner";
+import { Button, Spinner } from "@heroui/react";
 import React, { useEffect, useState } from "react";
 import { AnyObjectSchema } from "yup";
 

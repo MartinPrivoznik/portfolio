@@ -8,8 +8,8 @@ import {
   NavbarBrand,
   NavbarItem,
   NavbarMenuItem,
-} from "@nextui-org/navbar";
-import { link as linkStyles } from "@nextui-org/theme";
+  link as linkStyles,
+} from "@heroui/react";
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -27,13 +27,21 @@ const LanguagesDropdown = dynamic(
     import("./shared/LanguagesDropdown").then((mod) => mod.LanguagesDropdown),
   {
     ssr: false,
-  }
+  },
 );
 
 export const Navbar = (props: { lang: string }) => {
   const { t } = useTranslation(props.lang);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const path = usePathname();
+
+  const isActivePath = (href: string) => {
+    const target = buildUrl(props.lang, href);
+    const normalize = (value: string) =>
+      value.length > 1 ? value.replace(/\/+$/, "") : value;
+
+    return normalize(path) === normalize(target);
+  };
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -62,10 +70,13 @@ export const Navbar = (props: { lang: string }) => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  "transition-colors",
+                  isActivePath(item.href)
+                    ? "text-primary font-semibold"
+                    : "text-foreground/80 hover:text-foreground",
                 )}
-                color="foreground"
                 href={buildUrl(props.lang, item.href)}
+                aria-current={isActivePath(item.href) ? "page" : undefined}
               >
                 {t(item.label)}
               </NextLink>
@@ -120,13 +131,14 @@ export const Navbar = (props: { lang: string }) => {
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <NextLink
-                color={
-                  index === siteConfig.navItems.length - 1
-                    ? "primary"
-                    : "foreground"
-                }
                 href={buildUrl(props.lang, item.href)}
-                className="text-lg"
+                className={clsx(
+                  "text-lg transition-colors",
+                  isActivePath(item.href)
+                    ? "text-primary font-semibold"
+                    : "text-foreground",
+                )}
+                aria-current={isActivePath(item.href) ? "page" : undefined}
               >
                 {t(item.label)}
               </NextLink>

@@ -1,6 +1,5 @@
 import { siteConfig } from "@/config/site";
-import { Card, CardHeader, CardBody } from "@nextui-org/card";
-import { Image } from "@nextui-org/image";
+import { Card, CardHeader, CardBody, Image } from "@heroui/react";
 import { subtitle } from "./primitives";
 import { Reveal } from "./animations/Reveal";
 import { RevealSlide } from "./animations/RevealSlide";

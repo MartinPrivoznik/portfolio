@@ -2,7 +2,7 @@ import { siteConfig } from "@/config/site";
 import { RevealSlide } from "../animations/RevealSlide";
 import { subtitle } from "../primitives";
 import { Reveal } from "../animations/Reveal";
-import { Link } from "@nextui-org/link";
+import { Link } from "@heroui/react";
 import { useTranslation } from "@/app/i18n";
 
 export const CvEducation = async (props: { lang: string }) => {

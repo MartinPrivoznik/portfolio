@@ -1,6 +1,6 @@
 "use client";
 
-import { Input, Textarea } from "@nextui-org/input";
+import { Input, Textarea } from "@heroui/react";
 import { Form, Formik } from "formik";
 import { ContactFormType } from "@/types";
 import RunningButton from "./RunningButton";

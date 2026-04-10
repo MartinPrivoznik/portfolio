@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "react";
 import { useTranslation } from "@/app/i18n/client";
 import { ProjectList } from "@/components/projects/ProjectList";
 import { SubpageHeader } from "@/components/shared/SubpageHeader";
@@ -9,9 +10,10 @@ import { useState } from "react";
 export default function ProjectsPage({
   params,
 }: {
-  params: IInternationalizedPageParams;
+  params: Promise<IInternationalizedPageParams>;
 }) {
-  const { t } = useTranslation(params.lang);
+  const { lang } = use(params);
+  const { t } = useTranslation(lang);
   const [uselessProjects, setUselessProjects] = useState<boolean>(false);
 
   return (
@@ -29,7 +31,7 @@ export default function ProjectsPage({
         <ProjectList
           uselessProjects={uselessProjects}
           setUselessProjects={setUselessProjects}
-          lang={params.lang}
+          lang={lang}
         />
       </div>
     </>

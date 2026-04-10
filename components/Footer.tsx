@@ -1,48 +1,45 @@
 "use client";
 
 import { buildUrl } from "@/helpers/UrlBuilder";
-import { Link } from "@nextui-org/link";
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  RedditShareButton,
-  RedditIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-  EmailShareButton,
-  EmailIcon,
-} from "next-share";
+import { siteConfig } from "@/config/site";
+import { Link } from "@heroui/react";
+import NextLink from "next/link";
+import { GithubIcon, LinkedInIcon } from "@/components/icons";
 
 export const Footer = (props: { lang: string }) => {
   return (
-    <footer className="w-full flex flex-col items-center justify-center py-3">
-      <div className="w-full flex items-center justify-center">
-        <span className="text-default-600">
-          Copyright © {new Date().getFullYear()}
-        </span>
-        <Link href={buildUrl(props.lang, "/")} className="text-primary pl-1">
-          {" "}
-          Martin Přívozník
-        </Link>
-      </div>
-      <div className="flex gap-3 mt-3">
-        <FacebookShareButton url={"https://privoznik.dev"}>
-          <FacebookIcon size={32} round />
-        </FacebookShareButton>
-        <RedditShareButton url={"https://privoznik.dev"}>
-          <RedditIcon size={32} round />
-        </RedditShareButton>
-        <WhatsappShareButton url={"https://privoznik.dev"}>
-          <WhatsappIcon size={32} round />
-        </WhatsappShareButton>
-        <LinkedinShareButton url={"https://privoznik.dev"}>
-          <LinkedinIcon size={32} round />
-        </LinkedinShareButton>
-        <EmailShareButton url={"https://privoznik.dev"}>
-          <EmailIcon size={32} round />
-        </EmailShareButton>
+    <footer className="w-full border-t border-divider">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 py-5 px-6">
+        <div className="flex items-center gap-1 text-small text-default-500">
+          <span>© {new Date().getFullYear()}</span>
+          <Link
+            href={buildUrl(props.lang, "/")}
+            size="sm"
+            className="text-primary font-medium"
+          >
+            Martin Přívozník
+          </Link>
+        </div>
+        <div className="flex items-center gap-4">
+          <NextLink
+            href={siteConfig.links.linkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+            className="text-default-500 hover:text-primary transition-colors"
+          >
+            <LinkedInIcon className="w-5 h-5" />
+          </NextLink>
+          <NextLink
+            href={siteConfig.links.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+            className="text-default-500 hover:text-primary transition-colors"
+          >
+            <GithubIcon className="w-5 h-5" />
+          </NextLink>
+        </div>
       </div>
     </footer>
   );

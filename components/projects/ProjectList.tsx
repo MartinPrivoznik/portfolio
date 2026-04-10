@@ -1,7 +1,7 @@
 "use client";
 
 import { Dispatch, SetStateAction, useState } from "react";
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/react";
 import { RealProjects } from "./RealProjects";
 import { UselessProjects } from "./UselessProjects";
 import { Reveal } from "../animations/Reveal";

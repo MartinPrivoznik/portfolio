@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/react";
 import { Reveal } from "../animations/Reveal";
 import { subtitle } from "../primitives";
 import { Dispatch, SetStateAction } from "react";
