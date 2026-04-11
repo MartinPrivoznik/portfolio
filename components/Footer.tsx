@@ -4,7 +4,7 @@ import { buildUrl } from "@/helpers/UrlBuilder";
 import { siteConfig } from "@/config/site";
 import { Link } from "@heroui/react";
 import NextLink from "next/link";
-import { GithubIcon, LinkedInIcon } from "@/components/icons";
+import { LinkedInIcon } from "@/components/icons";
 
 export const Footer = (props: { lang: string }) => {
   return (
@@ -30,7 +30,7 @@ export const Footer = (props: { lang: string }) => {
           >
             <LinkedInIcon className="w-5 h-5" />
           </NextLink>
-          <NextLink
+          {/* <NextLink
             href={siteConfig.links.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -38,7 +38,7 @@ export const Footer = (props: { lang: string }) => {
             className="text-default-500 hover:text-primary transition-colors"
           >
             <GithubIcon className="w-5 h-5" />
-          </NextLink>
+          </NextLink> */}
         </div>
       </div>
     </footer>

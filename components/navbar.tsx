@@ -13,7 +13,7 @@ import {
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
 import clsx from "clsx";
-import { GithubIcon, DiscordIcon, LinkedInIcon } from "@/components/icons";
+import { DiscordIcon, LinkedInIcon } from "@/components/icons";
 import { Logo } from "@/components/icons";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -106,14 +106,14 @@ export const Navbar = (props: { lang: string }) => {
           >
             <DiscordIcon className="text-default-500" />
           </NextLink>
-          <NextLink
+          {/* <NextLink
             target="_blank"
             rel="noopener noreferrer"
             href={siteConfig.links.github}
             aria-label="Github"
           >
             <GithubIcon className="text-default-500" />
-          </NextLink>
+          </NextLink> */}
           <LanguagesDropdown lang={props.lang} />
           <ThemeSwitch lang={props.lang} />
         </NavbarItem>
@@ -161,14 +161,14 @@ export const Navbar = (props: { lang: string }) => {
           >
             <DiscordIcon className="text-default-500" />
           </NextLink>
-          <NextLink
+          {/* <NextLink
             target="_blank"
             rel="noopener noreferrer"
             href={siteConfig.links.github}
             aria-label="Github"
           >
             <GithubIcon className="text-default-500" />
-          </NextLink>
+          </NextLink> */}
         </div>
       </NavbarMenu>
     </NextUINavbar>
